@@ -7,13 +7,13 @@
     {
       "id":"000",
       "onend": {
-       "text" : "\nMaintenant, appuyez sur les touches de votre clavier pour faire chanter Fräulein Maria.\nPlus que <span class='reste'>16</span> notes à chanter.",
-       "textmobile" : "Tap Appuyez pour faire chanter Fräulein Maria.\nPlus que <span class='reste'>16</span> notes à chanter.",
+       "text" : "\nMaintenant, appuyez sur les touches de votre clavier pour faire chanter Fräulein Maria.\nPlus que <span class='reste'>6</span> notes à chanter.",
+       "textmobile" : "Tap Appuyez pour faire chanter Fräulein Maria.\nPlus que <span class='reste'>6</span> notes à chanter.",
        "minVideo" : 1,
        "maxVideo" : 14,
        "nextvideo" :  "015" ,
        "textafter" : "",
-       "nbRepeat" : 16,
+       "nbRepeat" : 5,
        "ordermulti" : true,
        "type" : "multibykeypressed",
        "dictionnaire" :"\n  Chantez!  \n\n  A : Sol  \n  Z : Do  \n  E : La  \n  R : Fa  \n  T : Mi  \n  Y : Do  \n  U : Ré  \n\n  I : Sol  \n  O : Do  \n  P : La  \n  Q : Si  \n  S : Do  \n  D : Ré  \n  F : Do  \n\n"

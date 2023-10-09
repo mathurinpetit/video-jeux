@@ -151,11 +151,11 @@
           {
             "id":"079",
             "onend": {
-             "text" : "\nAppuyez sur différentes touches du clavier pour 'Ouvrir votre âme' avec Quato...\n'Ouvrir votre âme' encore <span class='reste'>7</span> fois.",
+             "text" : "\nAppuyez sur différentes touches du clavier pour 'Ouvrir votre âme' avec Quato...\n'Ouvrir votre âme' encore <span class='reste'>5</span> fois.",
              "minVideo" : 80,
              "maxVideo" : 83,
              "nextvideo" :  "084",
-             "nbRepeat" : 6,
+             "nbRepeat" : 4,
              "textafter" : "",
              "type" : "multibykeypressed"
               }

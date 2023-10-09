@@ -105,7 +105,8 @@
                        "textmobile" : "Tap Toucher pour repéter 'Deux semaines'...\nAvoir l'air bizarre encore <span class='reste'>5</span> fois.",
                        "minVideo" : 20,
                        "maxVideo" : 27,
-                       "nextvideo" :  "028" ,
+                       "nextvideo" :  "028",
+                       "nbRepeat" : 4,
                        "textafter" : "",
                        "type" : "multibykeypressed"
                         }
