@@ -101,8 +101,8 @@
                     {
                       "id":"019",
                       "onend": {
-                       "text" : "\nAppuyez sur différentes touches du clavier pour repéter 'Deux semaines'...\nAvoir l'air bizarre encore <span class='reste'>17</span> fois.",
-                       "textmobile" : "Tap Toucher pour repéter 'Deux semaines'...\nAvoir l'air bizarre encore <span class='reste'>17</span> fois.",
+                       "text" : "\nAppuyez sur différentes touches du clavier pour repéter 'Deux semaines'...\nAvoir l'air bizarre encore <span class='reste'>5</span> fois.",
+                       "textmobile" : "Tap Toucher pour repéter 'Deux semaines'...\nAvoir l'air bizarre encore <span class='reste'>5</span> fois.",
                        "minVideo" : 20,
                        "maxVideo" : 27,
                        "nextvideo" :  "028" ,
@@ -142,6 +142,7 @@
                           "textmobile" : "\nTap Tapotez pour enlever votre masque.",
                           "nextvideos" : { "A" : "032", "_" : "062"} ,
                           "videomobiletoplay" : "032" ,
+                          "nextvideomobile" : "033",
                           "delay" : 1000,
                           "type" : "playbykey",
                           "textduring" : "\nlink 'A' 65 : Tapotez longement pour enlever votre masque."
