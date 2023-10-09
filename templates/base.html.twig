@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="description" content="video-jeux.fr - Joues avec des vidéos - Jeux en lignes avec des extraits de vidéos, films, publicités, clips..." />
+        <meta name="author" content="Mathurin Petit">
+        <title>{% block title %}video-jeux.fr - vidéos ludiques{% endblock %}</title>
+        <link rel="stylesheet"  type="text/css" media="all" href="{{ asset('/css/select2.min.css') }}" />
+        {% block stylesheets %}
+        <link rel="stylesheet"  type="text/css" media="all" href="{{ asset('/css/jquery-ui.min.css') }}" />
+        <link rel="stylesheet"  type="text/css" media="all" href="{{ asset('/css/bootstrap.min.css') }}" />
+        <link rel="stylesheet"  type="text/css" media="all" href="{{ asset('/css/bootstrap-theme.min.css') }}" />
+        <link rel="stylesheet"  type="text/css" media="all" href="{{ asset('/components/summernote/css/summernote.css') }}" />
+        <link rel="stylesheet"  type="text/css" media="all" href="{{ asset('/components/summernote/css/font-awesome.min.css') }}" />
+        {% endblock %}
+        {% block stylesheetsplus %}
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        {% block jsbefore %}
+        <script src="/js/lib/jquery-3.2.1.min.js"></script>
+        {% endblock %}
+        {% block javascripts %}
+        <script src="/js/lib/TweenLite.min.js"></script>
+        <script src="/js/lib/bootstrap.min.js"></script>
+        <script src="/js/lib/select2.full.min.js"></script>
+        <script src="/js/lib/modernizr-3.0.0.js"></script>
+        <script src="/js/lib/mainlib.js"></script>
+        <script src="/js/lib/jquery-ui.min.js"></script>
+        <script src="/components/summernote/summernote.min.js"></script>
+        <script src="/components/summernote/summernote-fr-FR.js"></script>
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block jsgame %}
+        {% endblock %}
+        {% block fblike %}
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.11';
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));</script>
+        {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,157 @@
+{
+ "globaldelay": "600",
+ "debugstart" : "000",
+ "cookie" : true,
+ "gamekeys" : {
+                "A" : {"keys" : [65,97] },
+                "B" : { "keys" : [66,98] },
+                "C" : { "keys" : [67,99] },
+                "D" : { "keys" : [68,100]}
+              },
+"scenario":[
+    {
+     "id":"000",
+     "onend": {
+       "text" : "link 'A' 65 : Si vous voulez en savoir plus appuyez sur link 'A' 65\nlink 'B' 66 : Frappez vous la tête avec link 'B' 66 si vous pensez que c'est un rêve\nlink 'C' 67 : Si vous ne voulez pas en savoir plus appuyer sur link 'C' 67",
+       "textmobile" : "Pour en savoir plus glisser vers Droite\nGauche Cela me paraît sans intérêts...",
+       "nextvideos" : { "A" : "001", "B" : "107", "_" : "056"} ,
+       "nextvideosmobile" : { "right" : "001", "left" : "056"} ,
+       "type" : "multichoicebykeypressed"
+        }
+     },
+     {
+       "id":"001",
+      "onend": {
+        "text" : "link 'A' 65 : Sornettes! Je préfére séduire une blonde avec mes compétences en informatique!\nlink 'B' 66 : Tes histoires ne m'intéressent pas...\nlink 'C' 67 : Je veux en savoir plus... Continues!",
+        "textmobile" : "Haut Je préfère draguer une blonde avec mon savoir!\nCela ne m'interresse pas Droite\nGauche Je veux en savoir plus",
+        "nextvideos" : {"A" : "131", "C" : "002", "_" : "057"} ,
+        "nextvideosmobile" : { "left" : "002", "right" : "057","up" : "131"} ,
+        "type" : "multichoicebykeypressed"
+         }
+      },
+      {
+        "id":"002",
+       "onend": {
+         "text" : "\nlink 'A' 65 : Qu'est ce que je dois faire ?\nlink 'B' 66 : Je ne veux pas 'baiser la gueule' à Cohagen, je ne le connais même pas",
+         "textmobile" : "Qu'est ce que je dois faire ? Droite\nGauche Je ne veux pas 'baiser la gueule' à Cohagen",
+         "nextvideos" : { "A" : "003", "_" : "058"} ,
+         "nextvideosmobile" : { "right" : "003", "left" : "058"} ,
+         "type" : "multichoicebykeypressed"
+          }
+       },
+       {
+         "id":"003",
+        "onend": {
+          "text" : "\nlink 'A' 65 : Je suis prêt\nlink 'B' 66 : Non ça fait peur ce truc!",
+          "textmobile" : "Non ça fait peur ce truc Droite\nOk, je suis prêt Gauche",
+          "nextvideos" : { "A" : "004", "_" : "056"} ,
+          "nextvideosmobile" : { "left" : "004", "right" : "056"} ,
+          "type" : "multichoicebykeypressed"
+           }
+        },
+
+        {
+         "id":"004",
+         "onend": {
+           "text" : "\nlink 'A' 65 : J'arrête tout de suite ça fait mal!\nlink 'B' 66 : Sortir le truc de son nez...",
+           "textmobile" : "Tap Toucher doucement pour sortir l'émetteur du nez",
+           "nextvideos" : { "B" : "005", "_" : "058"} ,
+           "videomobiletoplay" : "005" ,
+           "nextvideomobile" : "006",
+           "delay" : 500,
+           "type" : "playbykey",
+           "textduring" : "\nAppuyez longuement sur link 'B' 66 pour sortir l'émetteur de votre nez"
+            }
+         },
+         {
+          "id":"005",
+          "onend": {
+            "text" : "\nlink 'B' 66 : Appuyez longuement sur link 'B' 66 pour sortir l'émetteur de votre nez",
+            "textmobile" : "Tap Toucher doucement pour sortir l'émetteur du nez",
+            "nextvideos" : { "B" : "006", "_" : "057"} ,
+            "type" : "multichoicebykeypressed"
+             }
+          },
+          {
+            "id":"006",
+            "onstart": { "stopvideo" : "005" },
+            "onend": {
+             "text" : "C'est quoi ça?\nlink 'A' 65 : Je dois faire quoi Maintenant? Me remettre l'émetteur dans le nez?\nlink 'B' 66 : C'est quoi ce bordel? Je ne veux pas le savoir je m'en vais!\nlink 'C' 67 : Télévision, dis moi quoi faire!",
+             "textmobile" : "Haut Je dois faire quoi Maintenant ?\nJe vais me remettre l'émetteur dans le nez ! Droite \nGauche Je ne veux pas le savoir je m'en vais.",
+             "nextvideos" : { "A" : "007", "C" : "008", "_" : "056"} ,
+             "nextvideosmobile" : { "left" : "056", "right" : "007", "up" : "008"} ,
+             "type" : "multichoicebykeypressed"
+              }
+           },
+           {
+             "id":"007",
+            "onend": {
+              "text" : "\nlink 'A' 65 : J'arrête tout de suite ça fait mal !\nlink 'B' 66 : Sortir le truc...",
+              "textmobile" : "Tap Toucher doucement pour sortir l'émetteur du nez",
+              "nextvideos" : { "B" : "005", "_" : "058"} ,
+              "delay" : 500,
+              "videomobiletoplay" :  "005" ,
+              "nextvideomobile" : "006",
+              "textduring" : "\nlink 'B' 66 : Appuyez longuement sur link 'B' 66 pour sortir l'émetteur de votre nez",
+              "type" : "playbykey"
+               }
+            },
+            {
+              "id":"008", 
+             "onend": {
+               "text" : "De quoi tu parles?\nlink 'A' 65 : J'ai pas bien compris ce que je dois faire en fait.\nlink 'B' 66 : Ca va pas la tête je ne mettrai jamais les pieds sur Mars!\nlink 'C' 67 : Accepter la mission et aller sur Mars.",
+               "textmobile" : "Haut Accepter la mission et aller sur Mars\nJ'ai pas bien compris ce que je dois faire en fait Droite\nGauche Je ne mettrai jamais les pieds sur Mars!",
+               "nextvideos" : { "A" : "009", "C" : "redirect totalRecall_part2", "_" : "058"} ,
+               "nextvideosmobile" : { "right" : "009", "left" : "058", "up" : "redirect totalRecall_part2"} ,
+               "type" : "multichoicebykeypressed"
+                }
+             },
+             {
+              "id":"009",
+              "onend": {
+                "text" : "\nlink 'A' 65 : Réexplique moi encore...\nlink 'B' 66 : Se casser sur Mars.",
+                "textmobile" : "\nRéexplique moi encore... Droite\nGauche Se casser sur Mars.",
+                "nextvideos" : { "A" : "009", "B" : "redirect totalRecall_part2", "_" : "056"},
+                "nextvideosmobile" : { "right" : "009", "left" : "redirect totalRecall_part2"} ,
+                "type" : "multichoicebykeypressed"
+                 }
+              },
+              {
+               "id":"107",
+               "onend": {
+                 "text" : "\nlink 'A' 65 : Ce n'est pas un rêve! Dis moi quoi faire...\nlink 'B' 66 : Réexplique moi ça je ne t'ai pas écouté!",
+                  "textmobile" : "Ce n'est pas un rêve! Dis moi quoi faire... Droite\nGauche Réexplique moi ça je ne t'ai pas écouté!",
+                 "nextvideos" : { "A" : "001", "B" : "000", "_" : "056"},
+                 "nextvideosmobile" : { "right" : "001", "left" : "000"} ,
+                 "type" : "multichoicebykeypressed"
+                  }
+               },
+               {
+                "id":"131",
+                "onend": {
+                  "text" : "Mince! Elle n'a rien compris...\nlink 'A' 65 : Je vais insulter son fils!\nlink 'B' 66 : Bon télévision, parles moi encore!",
+                  "textmobile" : "Mince! Elle n'a rien compris...\nJe vais insulter son fils! Droite\nGauche Bon télévision, parles moi encore!",
+                  "nextvideos" : { "A" : "125", "B" : "002", "_" : "057"},
+                  "nextvideosmobile" : { "right" : "125","left" : "002"} ,
+                  "type" : "multichoicebykeypressed"
+                   }
+                },
+                {
+                 "id":"125",
+                 "onend": {
+                   "text" : "\nIl ne réagit pas non plus... bon...\nlink 'A' 65 : Allez, télévision, racontes moi des trucs!",
+                   "textmobile" : "Il ne réagit pas non plus... bon...Droite\nGauche Allez, télévision, racontes moi encore des trucs!",
+                   "nextvideos" : { "A" : "003", "_" : "057"},
+                   "nextvideosmobile" : { "right" : "057","left" : "003"},
+                   "type" : "multichoicebykeypressed"
+                    }
+                 }
+  ],
+  "gameovers":{
+    "idmin" : 56,
+    "idmax" : 58,
+     "text" : "\nVous avez perdu !Pour rejouer la dernière séquence cliquer ici : <a href='#' class='btn btn-xs btn-default' style='text-decoration:none' onClick='restartOnLastCheckpoint(); return false;'><span class='glyphicon glyphicon-repeat'></span>&nbsp;Rejouer</a>\nOu appuyez sur 'ESPACE'.",
+    "textmobile" : "\nVous avez perdu !\nTap Pour rejouer toucher l'écran."
+     }
+
+}

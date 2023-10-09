@@ -1,0 +1,153 @@
+{% extends 'base.html.twig' %}
+{% block jsbefore %}
+  <script type="text/javascript" src="/js/lib/jquery-2.2.4.min.js"></script>
+  <script type="text/javascript" src="/js/lib/jquery.mobile-1.4.5.min.js"></script>
+{% endblock %}
+{% block body %}
+
+{% if cookieVal and cookieVidVal %}
+    {% if cookieVidVal and (game.videoPath == cookieVal) %}
+    {% set pathVideoMp4 = 'videos/'~game.videoPath~'/'~cookieVidVal~'.mp4' %}
+    {% set pathVideoWebm = 'videos/'~game.videoPath~'/'~cookieVidVal~'.webm' %}
+    <video id="video_{{cookieVidVal}}" webkit-playsinline >
+       <source src="{{ asset(pathVideoMp4) }}" type='video/mp4'>
+       <source src="{{ asset(pathVideoWebm) }}" type='video/webm'>
+    </video>
+    {% endif %}
+
+{% else %}
+{% set pathVideoMp4 = 'videos/'~game.videoPath~'/'~ game_json.debugstart~'.mp4' %}
+{% set pathVideoWebm = 'videos/'~game.videoPath~'/'~game_json.debugstart~'.webm' %}
+<video id="video_{{game_json.debugstart}}" webkit-playsinline >
+   <source src="{{ asset(pathVideoMp4) }}" type='video/mp4'>
+   <source src="{{ asset(pathVideoWebm) }}" type='video/webm'>
+</video>
+{% endif %}
+
+<div class="mobileHeadLeft" >
+    <button id="goFSButton" class="btn btn-default btn-xs" style="text-decoration:none; opacity:0.6;" ><span class="goFSSpan glyphicon glyphicon-resize-full"></span><span class="goFSText">&nbsp;Plein Écran</span></button>
+    </button>
+</div>
+
+<div class="mobileHeadRight" >
+    <a href="{{ path("videogame") }}" class="btn btn-default btn-xs retour_accueil_btn" style="text-decoration:none; opacity:0.6; margin-bottom:5px;" rel="external"><span class="glyphicon glyphicon-home"></span></a><br/>
+    {% if not urlgame %}
+    <button data-toggle="modal" data-target="#sharePopup" class="popupPartage btn btn-xs btn-primary" style="padding-top:5px;" >
+            <object type="image/svg+xml" data="{{ asset('share.svg') }}" width="12" height="12" color="white"></object>
+    </button>
+    {% endif %}
+</div>
+<div id="startButton" style="margin: 0px; padding: 0px; position: fixed; right: 0px; top: 0px; width: 100%; height: 100%; z-index: 30001; background: rgba(0,0,0,.5); " >
+    <div class="buttonStartParent">
+        <button class="btn btn-lg btn-dark buttonStart"  id="startGame"><strong>COMMENCER&nbsp;<span class="glyphicon glyphicon-play" style="color:#5cb85c;"></span></strong></button>
+        <span class="turn-mobile btn btn-lg btn-dark buttonStart" ><img src='/turn-mobile.png' style='width:64px; padding-top:26px;' /></span>
+    </div>
+</div>
+
+<div id="divLoading" style="margin: 0px; padding: 0px; position: fixed; right: 0px; top: 0px; width: 100%; height: 100%; z-index: 30001; opacity: 0.8;">
+  <p style="position: absolute; color: White; top: 35%; left: 40%;">
+  <img src="{{ asset('images/'~game.shortName~'.gif') }}"><br/>
+  &nbsp;Chargement...
+  </p>
+</div>
+
+<div class="FSButtonHelperPanel" style="display:none;">
+    <div style="margin: 0px; padding: 0px; position: fixed; left: 0px; top: 0px; width: 75%; height: 40px; z-index: 30001; opacity: 0.8; background-color:#000;"></div>
+    <div style="margin: 0px; padding: 0px; position: fixed; right: 0px; top: 40px; width: 100%; height: 90%; z-index: 30001; opacity: 0.8; background-color:#000;">
+        <p style="position: absolute; color: White; top: 0%; left: 75%;">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-arrow-up' ></span>&nbsp;<br/>
+        A tout moment, passer en mode plein écran ici pour plus de confort.
+        </p>
+    </div>
+</div>
+
+
+<div class="modal fade" id="sharePopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="row">
+            <div class="col-xs-10">
+                <h4 class="modal-title" style="color:black;">Partager votre expérience</h4>
+            </div>
+            <div class="col-xs-2">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            </div>
+      </div>
+      <div class="modal-body">
+          <p>
+            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=URLENCODED&t=TITLE" class="share facebook" data-network="facebook">
+              <img src="{{ asset('icons/facebook_icon.png') }}" alt="Facebook" />
+            </a>
+            <a target="_blank" href="https://twitter.com/share?url=URLENCODED&text=TITLE" class="share twitter" data-network="twitter">
+              <img src="{{ asset('icons/twitter_icon.png') }}" alt="Twitter" />
+            </a>
+            <a target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=URLENCODED&title=TITLE" class="share linkedin" data-network="linkedin" rel="nofollow">
+              <img src="{{ asset('icons/linkedin_icon.png') }}" alt="Linkedin" />
+            </a>
+            <a target="_blank" href="https://plus.google.com/share?url=URLENCODED" class="share google" data-network="google">
+              <img src="{{ asset('icons/gplus_icon.png') }}" alt="Google+" />
+            </a>
+            <a target="_blank" title="Envoyer par mail" href="mailto:?Subject=Regarde ça c'est cool !&amp;Body=regarde%20cet%20article%20c'est%20super !%20 https://tontonduweb.com/previews-warc/genieCivil/article1.html" rel="nofollow">
+              <img src="{{ asset('icons/email_icon.png') }}" alt="email" />
+            </a>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger btn-xs">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% if urlgame %}
+<div id="dictionnairemobile">
+    <div style="position: relative;">
+
+        <p style="margin: 0 10px 5px;" >Tapez des mots ici :
+            <a id="playSequenceBtn" class="btn btn-xs btn-success" onclick="playSequenceBtn(); return false;" style="float:right;font-size: 10px;line-height: 1.4; font-weight:bold;margin-top:2px;margin-right:2px;">Lire&nbsp;<span class="glyphicon glyphicon-play"></span></a>
+            <button data-toggle="modal" data-target="#sharePopup" class="popupPartage btn btn-xs btn-primary" style="float:right;font-size: 10px;line-height: 1.4; font-weight:bold;margin-top:2px;margin-right:5px;">
+                    <strong>Partager</strong>&nbsp;<object type="image/svg+xml" data="{{ asset('share.svg') }}" width="10" height="10" color="white"></object>
+            </button>
+        </p>
+        <div class="choices" style="margin: 0px 10px;">
+          <select id="select2-mobile" style="color:#000; width:100%; height: 48px;" multiple="multiple">
+            <option value=""></option>
+              {% for videoWord in game_json.dictionnaire %}
+                <option value="{{ videoWord.id }}">{{ videoWord.word }}</option>
+              {% endfor %}
+          </select>
+          <span id="selectionsSelect2"></span>
+        </div>
+    </div>
+</div>
+{% else %}
+
+   <div id="footer" >
+       <div style="position: relative; left: 2%; max-width: 96%;">
+         <span class="text" style="font-size : 9pt;"></span>
+     </div>
+   </div>
+{% endif %}
+
+
+   <div id="skip" style="display:none;">
+     <span class="btn btn-default skip" style="text-decoration:none;" >
+       Passer&nbsp;<span class="glyphicon glyphicon-arrow-right"></span>
+   </span>
+   </div>
+{% endblock %}
+
+{% block jsgame %}
+  <script type="text/javascript">
+   	{{ include('Engine/gameEngine.js.twig', { 'game': game ,'urlgame' : urlgame, 'mobile' : true}) }}
+   </script>
+{% endblock %}
+
+
+{% block stylesheets %}
+<link rel="stylesheet"  type="text/css" media="all" href="{{ asset('/css/bootstrap.min.css') }}" />
+<link rel="stylesheet"  type="text/css" media="all" href="{{ asset('/css/mainGame.css') }}" />
+<link rel="stylesheet"  type="text/css" media="all" href="{{ asset('/css/mobileMainGame.css') }}" />
+{% endblock %}

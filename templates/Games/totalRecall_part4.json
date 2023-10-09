@@ -1,0 +1,243 @@
+{
+ "globaldelay": "600",
+ "debugstart" : "061",
+ "cookie" : true,
+ "gamekeys" : {
+                "A" : {"keys" : [65,97] },
+                "B" : { "keys" : [66,98] },
+                "C" : { "keys" : [67,99] },
+                "D" : { "keys" : [68,100]}
+              },
+"scenario":[
+    {
+     "id":"061",
+     "onend": {
+         "text" : "link 'A' 65 : Racontez m'en plus sur la colonie Marsienne.\nlink 'B' 66 : Vos histoire de Marsiens m'interressent pas du tout.\nlink 'C' 67 : Montrer vos grandes compétences en language binaire pour draguer Mélina.",
+       "nextvideos" : { "A" : "062", "C" : "123", "_" : "085"} ,
+       "type" : "multichoicebykeypressed"
+        }
+     },
+     {
+       "id":"062",
+      "onend": {
+        "text" : "\nlink 'A' 65 : Je vais montrer mes compétences en language binaire pour draguer Mélina.\nlink 'B' 66 : Qu'est-ce que je peux faire?",
+        "nextvideos" : { "A" : "123", "B" : "063", "_" : "086"} ,
+        "type" : "multichoicebykeypressed"
+         }
+      },
+      {
+        "id":"063",
+       "onend": {
+         "text" : "\nlink 'A' 65 : Quoi par exemple?\nlink 'B' 66 : Je ne me souviens de rien désolé.",
+         "nextvideos" : { "A" : "064", "_" : "085"} ,
+         "type" : "multichoicebykeypressed"
+          }
+       },
+       {
+         "id":"064",
+         "onend": {
+           "text" : "\nBon, marre de discuter de ça, c'est le moment de l'embrasser.\nBougez la souris de haut en bas pour embrasser Melina...",
+           "nextvideos" : { "move" : "065", "aftermove" : "066"} ,
+           "type" : "playbymouse"
+         }
+       },
+       {
+         "id":"065"
+       },
+       {
+         "id":"066",
+        "onend": {
+          "text" : "\nlink 'A' 65 : Je continue à embrasser Melina.\nlink 'B' 66 : Je me barre, Melina n'est pas une femme pour moi.",
+          "nextvideos" : { "A" : "067", "_" : "086"} ,
+          "type" : "multichoicebykeypressed"
+           }
+        },
+        {
+          "id":"067",
+         "onend": {
+           "text" : "link 'A' 65 : Hum... cela ne me plait pas beaucoup, je disparaîs.\nlink 'B' 66 : Je vais suivre les mutants rebelles, je leur fais confiance.\nlink 'C' 67 : Se mettre en position foetal et disparaître.",
+           "nextvideos" : {"A": "126", "B" : "068", "C": "126", "_" : "086"} ,
+           "type" : "multichoicebykeypressed"
+            }
+         },
+          {
+             "id":"068",
+            "onend": {
+              "text" : "\nlink 'A' 65 : Entrer dans la base des mutants.\nlink 'B' 66 : Se casser de la base des mutants.",
+              "nextvideos" : { "A" : "069", "_" : "087"} ,
+              "type" : "multichoicebykeypressed"
+               }
+            },
+             {
+                "id":"069",
+               "onend": {
+                 "text" : "\nlink 'A' 65 : Refuser de suivre le rebelle.\nlink 'B' 66 : Suivre le rebelle pour parler au chef.",
+                 "nextvideos" : { "B" : "070", "_" : "087"} ,
+                 "type" : "multichoicebykeypressed"
+                  }
+               },
+             {
+                 "id":"070",
+                "onend": {
+                  "text" : "link 'A' 65 : Rien à foutre de ton barratin, je me tire.\nlink 'B' 66 : Insulter un peu le chef, c'est gratuit...\nlink 'C' 67 : Montrer vos compétences en binaire au chef...\nlink 'D' 68 : Continuez à m'expliquer s'il vous plait...",
+                  "nextvideos" : { "B" : "127", "C" : "128", "D" : "071", "_" : "087"} ,
+                  "type" : "multichoicebykeypressed"
+                   }
+              },
+            {
+                "id":"071",
+               "onend": {
+                 "text" : "link 'A' 65 : Alors on a pas le choix?\nlink 'B' 66 : Je pars de la base rebelle, cette mission n'a pas d'interrêt.\nlink 'C' 67 : Se frapper la tête contre le mur, ces mutants sont trop relous.",
+                 "nextvideos" : { "A" : "072", "C": "138", "_" : "087"} ,
+                 "type" : "multichoicebykeypressed"
+                  }
+             },
+           {
+               "id":"072",
+              "onend": {
+                "text" : "\nlink 'A' 65 : Amener moi voir Quato.\nlink 'B' 66 : Je ne connais pas ce Quato, fichez-moi la paix vilains mutants.",
+                "nextvideos" : { "A" : "073", "_" : "086"} ,
+                "type" : "multichoicebykeypressed"
+                 }
+            },
+          {
+              "id":"073",
+             "onend": {
+               "text" : "\nlink 'A' 65 : Tu m'embrouilles, je ne m'assoie pas! je me barre! \nlink 'B' 66 : Où est Quato?",
+               "nextvideos" : { "B" : "074", "_" : "087"} ,
+               "type" : "multichoicebykeypressed"
+                }
+           },
+         {
+             "id":"074",
+            "onend": {
+              "text" : "C'est louche...\nlink 'A' 65 : Suspecter le chef d'être Quato \nlink 'B' 66 : Bordel où est Quato, je perd mon temps!\nlink 'C' 66 : Bon aller ça suffit, je m'en vais!",
+              "nextvideos" : { "A" : "075", "B" : "074", "_" : "086"} ,
+              "type" : "multichoicebykeypressed"
+               }
+          },
+        {
+            "id":"075",
+           "onend": {
+             "text" : "link 'A' 65 : Re-suspecter le chef d'être Quato \nlink 'B' 66 : Attendre Quato...\nlink 'C' 66 : Faire un peu la moral au chef...",
+             "nextvideos" : { "A" : "075", "B" : "076", "C" : "129", "_" : "087"} ,
+             "type" : "multichoicebykeypressed"
+              }
+         },
+       {
+           "id":"076",
+          "onend": {
+            "text" : "link 'A' 65 : Avoir une discussion de mutant... \nlink 'B' 66 : Haaaaa! Dégueullasse! C'est quoi ça je me tire de là! \nlink 'C' 67 : Je veux me souvenir...",
+            "nextvideos" : { "A" : "130", "C" : "077", "_" : "087"} ,
+            "type" : "multichoicebykeypressed"
+             }
+        },
+        {
+            "id":"077",
+           "onend": {
+             "text" : "\nlink 'A' 65 : Oui... Continue... \nlink 'B' 66 : C'est quoi cette philosophie de comptoir?",
+             "nextvideos" : { "A" : "078", "_" : "087"} ,
+             "type" : "multichoicebykeypressed"
+              }
+         },
+        {
+            "id":"078",
+           "onend": {
+             "text" : "\nlink 'A' 65 : Je ne touche pas aux mutants, c'est plein de maladies. \nlink 'B' 66 : Prendre les mains de Quato même s'il est horrible.",
+             "nextvideos" : { "B" : "079", "_" : "087"} ,
+             "type" : "multichoicebykeypressed"
+              }
+         },
+          {
+            "id":"079",
+            "onend": {
+             "text" : "\nAppuyez sur différentes touches du clavier pour 'Ouvrir votre âme' avec Quato...\n'Ouvrir votre âme' encore <span class='reste'>7</span> fois.",
+             "minVideo" : 80,
+             "maxVideo" : 83,
+             "nextvideo" :  "084",
+             "nbRepeat" : 6,
+             "textafter" : "",
+             "type" : "multibykeypressed"
+              }
+           },
+            { "id": "080" }, { "id": "081" }, { "id": "082" }, { "id": "083" },
+            {
+              "id":"084",
+              "onend": {
+                "text" : "link 'A' 65 : J'ai 'Ouvert mon âme', je vais faire la morale aux enfants ! \nlink 'B' 66 : J'ai 'Ouvert mon âme', je vais sauver Mars ! \nlink 'C' 67 : Refuser l'enseignement de Quato.",
+                "nextvideos" : {"A" : "133", "B" : "redirect totalRecall_part5", "_" : "086"} ,
+                "type" : "multichoicebykeypressed"
+                 }
+             },
+             {
+               "id":"123",
+               "onend": {
+                 "text" : "Elle a l'air d'aimer...\nC'est le moment de l'embrasser.\nBougez la souris de haut en bas pour embrasser Melina...",
+                 "nextvideos" : { "move" : "065", "aftermove" : "066"} ,
+                 "type" : "playbymouse"
+               }
+             },
+             {
+               "id":"126",
+               "onend": {
+                 "text" : "\nBon je regrette d'avoir quitter Mélina ! \nlink 'A' 65 : Je retourne voir les mutants rebelles",
+                 "nextvideos" : { "A" : "069", "_" : "069"} ,
+                 "type" : "multichoicebykeypressed"
+                  }
+              },
+               {
+                   "id":"127",
+                  "onend": {
+                    "text" : "link 'A' 65 : Rien à foutre de ton barratin, je me tire.\nlink 'B' 66 : Insulter un peu le chef, c'est gratuit...\nlink 'C' 67 : Montrer vos compétences en binaire au chef...\nlink 'D' 68 : Continuez à m'expliquer s'il vous plait...",
+                    "nextvideos" : { "B" : "127", "C" : "128", "D" : "071", "_" : "087"} ,
+                    "type" : "multichoicebykeypressed"
+                     }
+                },
+                {
+                     "id":"128",
+                    "onend": {
+                      "text" : "link 'A' 65 : Rien à foutre de ton barratin, je me tire.\nlink 'B' 66 : Insulter un peu le chef, c'est gratuit...\nlink 'C' 67 : Montrer vos compétences en binaire au chef...\nlink 'D' 68 : Continuez à m'expliquer s'il vous plait...",
+                      "nextvideos" : { "B" : "127", "C" : "128", "D" : "071", "_" : "087"} ,
+                      "type" : "multichoicebykeypressed"
+                       }
+                  },
+                  {
+                       "id":"138",
+                      "onend": {
+                        "text" : "\nlink 'A' 65 : Continuer à se frapper la tête sur un mur.\nlink 'B' 66 :  Amènes moi voir 'Quato'! ",
+                        "nextvideos" : { "A" : "138", "B" : "073", "_" : "138"} ,
+                        "type" : "multichoicebykeypressed"
+                         }
+                    },
+                  {
+                      "id":"129",
+                     "onend": {
+                       "text" : "link 'A' 65 : Re-suspecter le chef d'être Quato. \nlink 'B' 66 : Attendre Quato...\nlink 'C' 66 : Faire un peu la morale au chef... pour qu'il arrête de vous cacher Quato!",
+                       "nextvideos" : { "A" : "075", "B" : "076", "C" : "129", "_" : "087"} ,
+                       "type" : "multichoicebykeypressed"
+                        }
+                   },
+                   {
+                       "id":"130",
+                      "onend": {
+                        "text" : "link 'A' 65 : Avoir une discussion de mutant... \nlink 'B' 66 : Haaaaa! Dégueullasse! C'est quoi ça je me tire de là! \nlink 'C' 67 : Je veux me souvenir...",
+                        "nextvideos" : { "A" : "130", "C" : "077", "_" : "087"} ,
+                        "type" : "multichoicebykeypressed"
+                         }
+                    },
+                    {
+                      "id":"133",
+                      "onend": {
+                        "text" : "Bon aller je vais quand même sauver Mars ! \nlink 'A' 65 : Mélina et les mutants me manquent.\nlink 'B' 66 : Continuer à souler l'enfant.",
+                        "nextvideos" : { "A" : "redirect totalRecall_part5", "B" : "133","_" : "redirect totalRecall_part5"} ,
+                        "type" : "multichoicebykeypressed"
+                         }
+                     }
+  ],
+  "gameovers":{
+    "idmin" : 85,
+    "idmax" : 87,
+    "text" : "\nVous avez perdu !Pour rejouer la dernière séquence clicker ici : <a href='#' class='btn btn-xs btn-default' style='text-decoration:none' onClick='restartOnLastCheckpoint(); return false;'><span class='glyphicon glyphicon-repeat'></span>&nbsp;Rejouer</a>\nOu appuyez sur 'ESPACE'."
+     }
+
+}

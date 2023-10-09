@@ -1,0 +1,239 @@
+{
+ "globaldelay": "600",
+ "debugstart" : "080",
+ "cookie" : true,
+ "gamekeys" : {
+                "A" : {"keys" : [65,97] },
+                "B" : { "keys" : [66,98] },
+                "C" : { "keys" : [67,99] },
+                "D" : { "keys" : [68,100]}
+              },
+"scenario":[
+    {
+     "id":"080",
+     "onend": {
+         "text" : "Il faut sauver Mars! Vous avez trouver une bombe!\nlink 'A' 65 : Jeter la bombe dans l'aeration pour expluser de l'air.\nlink 'B' 66 : Je ne sauve pas Mars, ces mutants n'ont qu'a se débrouiller tout seuls.",
+       "nextvideos" : { "A" : "081", "_" : "106"} ,
+       "type" : "multichoicebykeypressed"
+        }
+     },
+     {
+       "id":"081",
+      "onend": {
+        "text" : "link 'A' 65 : Je me baisse pour éviter l'explosion.\nlink 'B' 66 : Je ne crains pas le feu...\nlink 'C' 67 : Se mettre en position foetal et disparaître...",
+        "nextvideos" : { "A" : "082", "C" : "126", "_" : "105"} ,
+        "type" : "multichoicebykeypressed"
+         }
+      },
+      {
+        "id":"082",
+       "onend": {
+         "text" : "link 'A' 65 : J'attrape la corde et je conseille à ma copine de rester cool!\nlink 'B' 66 : J'attrape la corde pour ne pas me faire aspirer!\nlink 'C' 67 : Tan pis je me laisser aspirer dans le feu...",
+         "nextvideos" : {"A" : "120", "B" : "083", "_" : "105"} ,
+         "type" : "multichoicebykeypressed"
+          }
+       },
+       {
+         "id":"083",
+        "onend": {
+          "text" : "link 'A' 65 : Se laisser aspirer dans le feu.\nlink 'B' 66 : Remonter le long de la corde.\nlink 'C' 67 : Critiquer les humains dans ce moment difficile. ",
+          "nextvideos" : { "B" : "084", "C" : "134", "_" : "105"} ,
+          "type" : "multichoicebykeypressed"
+           }
+        },
+        {
+          "id":"084",
+          "onend": {
+            "text" : "\nFaites des mouvements de haut en bas pour remonter la corde.",
+            "nextvideos" : { "move" : "085", "aftermove" : "086"} ,
+            "type" : "playbymouse"
+          }
+        },
+        {
+          "id":"085"
+        },
+        {
+         "id":"086",
+         "onstart": { "stopvideo" : "085" },
+         "onend": {
+           "text" : "link 'A' 65 : Remonter encore vers l'activateur à côté de 'Cohagen'.\nlink 'B' 66 : Je lache prise c'est trop tard !\nlink 'C' 67 : Raconter plein de trucs alors que c'est pas le moment !",
+           "nextvideos" : { "A" : "087", "C" : "137", "_" : "107"} ,
+           "type" : "multichoicebykeypressed"
+            }
+         },
+         {
+           "id":"087",
+          "onend": {
+            "text" : "\nlink 'A' 65 : Croire le mechant 'Cohagen' et se laisser mourrir. \nlink 'B' 66 : Toi tu vas mourrir! (tuer 'Cohagen')",
+            "nextvideos" : { "B" : "088", "_" : "105"} ,
+            "type" : "multichoicebykeypressed"
+             }
+          },
+          {
+            "id":"088",
+           "onend": {
+             "text" : "\nlink 'A' 65 : Essayer d'atteindre l'interrupteur qui déclenche l'air sur Mars.\nlink 'B' 66 : Abandonner les Marsien pour de bon.",
+             "nextvideos" : { "A" : "089", "_" : "106"} ,
+             "type" : "multichoicebykeypressed"
+              }
+           },
+           {
+             "id":"089",
+            "onend": {
+              "text" : "\nlink 'A' 66 : Faire durer le suspens parce que c'est bon.",
+              "nextvideos" : { "A" : "090", "_" : "090"} ,
+              "type" : "multichoicebykeypressed"
+               }
+            },
+             {
+             "id":"090",
+                "onend": {
+                  "text" : "\nlink 'A' 66 : Faire durer encore un peu plus le suspens parce que c'est bon.\nlink 'B' 66 : Bon appuyer sur l'interrupteur d'air de Mars.",
+                  "nextvideos" : { "A" : "090", "B" : "091", "_" : "107"} ,
+                  "type" : "multichoicebykeypressed"
+                 }
+              },
+              {
+                "id":"091",
+                "onend": {
+                  "text" : "\nMaintenez link 'A' 65 pour déclencher l'air sur Mars",
+                  "nextvideos" : { "A" : "092", "_" : "106"} ,
+                  "delay" : 500,
+                  "type" : "playbykey",
+                  "textduring" : "\nMaintenez link 'A' 65 pour déclencher l'air sur Mars"
+                   }
+               },
+              {
+                "id":"092",
+               "onend": {
+                 "text" : "\nMaintenez link 'A' 65 pour déclencher l'air sur Mars",
+                 "nextvideos" : { "A" : "093", "_" : "106"} ,
+                 "type" : "multichoicebykeypressed"
+                  }
+               },
+              {
+                "id":"093",
+                "onstart": { "stopvideo" : "092" },
+                "onend": {
+                 "text" : "link 'A' 65 : Regretter son choix et tuer des mutants.\nlink 'B' 66 : Se relever dans pour contempler les nuages... en silence.\nlink 'C' 67 : Se relever dans pour contempler les nuages... en récitant du binaire.",
+                 "nextvideos" : { "B" : "094", "C" : "140", "_" : "106"} ,
+                 "type" : "multichoicebykeypressed"
+                  }
+               },
+               {
+                 "id":"094",
+                 "onend": {
+                  "text" : "\nlink 'A' 65 : Tuer les mutants quand même.\nlink 'B' 66 : S'émerveiller devant l'air de Mars.",
+                  "nextvideos" : { "B" : "095", "_" : "106"} ,
+                  "type" : "multichoicebykeypressed"
+                   }
+                },
+
+                {
+                  "id":"095",
+                  "onend": {
+                   "text" : "\nlink 'B' 66 : Monter sur la montagne avec 'Melina'",
+                   "nextvideos" : { "B" : "096", "_" : "096"} ,
+                   "type" : "multichoicebykeypressed"
+                    }
+                 },
+
+                  {
+                   "id":"096",
+                   "onend": {
+                      "text" : "\nlink 'A' 65 : Ecouter Melina...\nlink 'B' 66 : Tuer les mutants de Mars, ils n'ont pas droit à mon air.",
+                      "nextvideos" : { "A" : "097", "_" : "108"} ,
+                      "type" : "multichoicebykeypressed"
+                       }
+                    },
+                    {
+                  "id":"097",
+                  "onend": {
+                  "text" : "\nlink 'A' 65 : Toucher la fille au trois seins.\nlink 'B' 66 : Et si c'était vraiment un rêve ? ",
+                  "nextvideos" : { "A": "101", "B" : "098", "_" : "106"} ,
+                  "type" : "multichoicebykeypressed"
+                    }
+                     },
+                     {
+                 "id":"098",
+                 "onend": {
+                "text" : "J'ai sauvé Mars, je suis un beau gosse!\nlink 'A' 65 : Embrasser Melina.\nlink 'B' 66 : Toucher encore la fille au trois seins.\nlink 'C' 67 : Tuer ces vilains mutants.",
+                "nextvideos" : { "A" : "099", "B" : "101", "_" : "106"} ,
+                  "type" : "multichoicebykeypressed"
+                     }
+                      },
+
+       {
+         "id":"099",
+         "onend": {
+           "text" : "Bravo vous avez gagner!\n Bougez la souris pour embrasser Melina...     autant que vous voulez.&nbsp;&nbsp;&nbsp;<a class='btn btn-xs btn-success' onClick=' window.location = window.location.origin; return false;'><span class='glyphicon glyphicon-home'></span>&nbsp;Retour</a>",
+           "nextvideos" : { "move" : "100", "aftermove" : "099"} ,
+           "type" : "playbymouse"
+         }
+       },
+       { "id": "100" },
+       {
+     "id":"101",
+     "onend": {
+     "text" : "\nlink 'A' 65 : Retourner voir Melina.",
+     "nextvideos" : { "A": "097", "_" : "097"} ,
+     "type" : "multichoicebykeypressed"
+       }
+     },
+     {
+       "id":"120",
+       "onend": {
+         "text" : "\nlink 'A' 65 : Remonter le long de la corde.",
+         "nextvideos" : { "A": "086", "_" : "097"} ,
+         "type" : "multichoicebykeypressed"
+       }
+     },
+     {
+       "id":"126",
+       "onend": {
+         "text" : "\nJ'ai évité l'explosion parfait ! \nlink 'A' 65 : Se téléporter près de Mélina",
+         "nextvideos" : { "A" : "082", "_" : "082"} ,
+         "type" : "multichoicebykeypressed"
+          }
+      },
+      {
+        "id":"134",
+        "onend": {
+          "text" : "\nlink 'A' 65 : Remonter le long de la corde pour sauver Mars \nlink 'B' 66 : Faire les trucs parce qu'on te la demandé.",
+          "nextvideos" : { "A" : "084", "B" : "135", "_" : "082"} ,
+          "type" : "multichoicebykeypressed"
+           }
+       },
+       {
+         "id":"135",
+         "onend": {
+           "text" : "\nlink 'A' 65 : Remonter le long de la corde pour sauver Mars \nlink 'B' 66 : Faire les trucs parce qu'on te la demandé.",
+           "nextvideos" : { "A" : "084", "B" : "135", "_" : "082"} ,
+           "type" : "multichoicebykeypressed"
+            }
+        },
+        {
+         "id":"137",
+         "onstart": { "stopvideo" : "085" },
+         "onend": {
+           "text" : "link 'A' 65 : Remonter encore vers l'activateur à côté de 'Cohagen'.\nlink 'B' 66 : Je lache prise c'est trop tard !\nlink 'C' 67 : Raconter plein de trucs alors que c'est pas le moment !",
+           "nextvideos" : { "A" : "087", "C" : "137", "_" : "107"} ,
+           "type" : "multichoicebykeypressed"
+            }
+         },
+         {
+           "id":"140",
+           "onend": {
+            "text" : "\nlink 'A' 65 : Tuer les mutants quand même.\nlink 'B' 66 : S'émerveiller devant l'air de Mars.",
+            "nextvideos" : { "B" : "095", "_" : "108"} ,
+            "type" : "multichoicebykeypressed"
+             }
+          }
+  ],
+  "gameovers":{
+    "idmin" : 105,
+    "idmax" : 108,
+    "text" : "\nVous avez perdu !Pour rejouer la dernière séquence clicker ici : <a href='#' class='btn btn-xs btn-default' style='text-decoration:none' onClick='restartOnLastCheckpoint(); return false;'><span class='glyphicon glyphicon-repeat'></span>&nbsp;Rejouer</a>\nOu appuyez sur 'ESPACE'."
+     }
+
+}

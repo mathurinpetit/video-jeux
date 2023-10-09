@@ -1,0 +1,199 @@
+{
+ "globaldelay": "600",
+ "debugstart" : "000",
+ "cookie" : false,
+ "gamekeys" : {},
+"scenario":[
+  {
+    "id":"000",
+    "onend": {
+     "text" : "\nAppuyez sur n'importe quelle touche pour jouer comme Hit House",
+     "textmobile" : "\nGlissez vers Droite pour jouer comme Hit House",
+     "nextvideos" : { "_" : "001"} ,
+     "nextvideosmobile" : { "right" : "001"} ,
+     "type" : "multichoicebykeypressed"
+      }
+   },
+    {
+      "id":"001",
+      "onend": {
+       "text" : "\nMaintenant, appuyer sur les touches de votre clavier pour faire de la techno.\nPlus que <span class='reste'>10</span> fois.",
+       "textmobile" : "Tap Toucher pour faire de la techno...\ncomme un beau gosse encore <span class='reste'>10</span> fois.",
+       "minVideo" : 2,
+       "maxVideo" : 8,
+       "nextvideo" :  "009" ,
+       "textafter" : "",
+       "ordermulti" : true,
+       "nbRepeat" : 10,
+       "type" : "multibykeypressed"
+        }
+     },
+     { "id" : "002" },
+     { "id" : "003" },
+     { "id" : "004" },
+     { "id" : "005" },
+     { "id" : "006" },
+     { "id" : "007" },
+     { "id" : "008" },
+     {
+       "id":"009",
+       "onend": {
+         "text" : "\nBravo, appuyer sur les touches de votre clavier pour jouer du synthé!\nPlus que <span class='reste'>16</span> fois.",
+         "textmobile" : "Vous jouer du synthé comme un fou!\nTap Toucher encore <span class='reste'>16</span> fois.",
+         "minVideo" : 10,
+        "maxVideo" : 21,
+        "nextvideo" :  "032" ,
+        "textafter" : "",
+        "ordermulti" : true,
+        "nbRepeat" : 16,
+        "type" : "multibykeypressed"
+         }
+       },
+       { "id" : "010" },
+       { "id" : "011" },
+       { "id" : "012" },
+       { "id" : "013" },
+       { "id" : "014" },
+       { "id" : "015" },
+       { "id" : "016" },
+       { "id" : "017" },
+       { "id" : "018" },
+      { "id" : "020" },
+      { "id" : "021" },
+      {
+        "id":"032",
+        "onend": {
+         "text" : "\nAppuyer sur n'importe quelle touche pour jouer la suite.",
+         "textmobile" : "\nGlissez vers Droite pour jouer la suite.",
+         "nextvideos" : { "_" : "033"} ,
+         "nextvideosmobile" : { "right" : "033"} ,
+         "type" : "multichoicebykeypressed"
+         }
+       },
+       {
+         "id":"033",
+         "onend": {
+           "text" : "\nAppuyer les touches pour chanter la techno des années 80.\nPlus que <span class='reste'>16</span> fois.",
+           "textmobile" : "Chantez moi cette belle techno des année 80.\nTap Toucher encore <span class='reste'>16</span> fois.",
+           "minVideo" : 34,
+           "maxVideo" : 46,
+           "nbRepeat" : 15,
+           "nextvideo" :  "047" ,
+           "textafter" : "",
+           "ordermulti" : true,
+           "type" : "multibykeypressed"
+          }
+       },
+       { "id" : "034" },
+       { "id" : "035" },
+       { "id" : "036" },
+       { "id" : "037" },
+       { "id" : "038" },
+       { "id" : "039" },
+       { "id" : "040" },
+       { "id" : "041" },
+       { "id" : "042" },
+       { "id" : "043" },
+       { "id" : "044" },
+       { "id" : "045" },
+       { "id" : "046" },
+       {
+         "id":"047",
+         "onend": {
+          "text" : "\nAppuyer sur n'importe quelle touche pour jouer pour continuer le morceau.",
+          "textmobile" : "\nGlissez vers Droite pour continuer le morceau.",
+          "nextvideos" : { "_" : "048"} ,
+          "nextvideosmobile" : { "right" : "048"} ,
+          "type" : "multichoicebykeypressed"
+          }
+        },
+       {
+         "id":"048",
+         "onend": {
+          "text" : "\nTapes encore pour jouer du Hit House comme un dieu.\nPlus que <span class='reste'>16</span> paroles à chanter.",
+          "textmobile" : "\nTap Touches encore pour jouer du Hit House comme un dieu.\nPlus que <span class='reste'>16</span> paroles à chanter.",
+          "minVideo" : 49,
+          "maxVideo" : 60,
+          "nextvideo" :  "061" ,
+          "textafter" : "",
+          "nbRepeat" : 16,
+
+          "type" : "multibykeypressed"
+           }
+        },
+        { "id" : "049" },
+        { "id" : "050" },
+        { "id" : "051" },
+        { "id" : "052" },
+        { "id" : "053" },
+        { "id" : "054" },
+        { "id" : "055" },
+        { "id" : "056" },
+        { "id" : "057" },
+        { "id" : "058" },
+        { "id" : "059" },
+        { "id" : "060" },
+        {
+          "id":"061",
+          "onend": {
+           "text" : "\nAppuyez sur les touches pour continuer à faire de la techno!\nEncore <span class='reste'>16</span> notes à jouer.",
+           "textmobile" : "\nTap Touches encore <span class='reste'>16</span> fois\n J'aime cette techno!",
+           "minVideo" : 62,
+           "maxVideo" : 72,
+           "textafter" : "",
+           "nextvideo" :  "073" ,
+           "nbRepeat" : 16,
+           "ordermulti" : true,
+           "type" : "multibykeypressed"
+            }
+         },
+         { "id" : "062" },
+         { "id" : "063" },
+         { "id" : "064" },
+         { "id" : "065" },
+         { "id" : "066" },
+         { "id" : "067" },
+         { "id" : "068" },
+         { "id" : "069" },
+         { "id" : "070" },
+         { "id" : "071" },
+         { "id" : "072" },
+         {
+           "id":"073",
+           "onend": {
+            "text" : "\nAppuyez sur les touches pour faire chanter la chanteuse!\nChante <span class='reste'>19</span> fois...",
+            "textmobile" : "\nTap Touches encore pour faire chanter la chanteuse!\nChante <span class='reste'>19</span> fois...",
+            "minVideo" : 74,
+            "maxVideo" : 82,
+            "textafter" : "",
+            "nextvideo" :  "083" ,
+            "ordermulti" : true,
+            "nbRepeat" : 18,
+            "type" : "multibykeypressed"
+             }
+          },
+         { "id" : "074" },
+         { "id" : "075" },
+         { "id" : "076" },
+         { "id" : "077" },
+         { "id" : "078" },
+         { "id" : "079" },
+         { "id" : "080" },
+         { "id" : "081" },
+         { "id" : "082" },
+         {
+           "id":"083",
+           "onend": {
+            "text" : "<a class='btn btn-xs btn-success' style='margin : 5px 0px;' onClick=' window.location = window.location.origin; return false;'><span class='glyphicon glyphicon-home' ></span>&nbsp;Retour</a>&nbsp;&nbsp;Bravo ! Vous avez finit !\nContinuer à appuyer sur les touches pour faire la techno des années 80.\nPlus que <span class='reste'>16</span> fois.",
+            "textmobile" : "<a class='btn btn-xs btn-success' style='margin : 5px 0px;' onClick=' window.location = window.location.origin; return false;'><span class='glyphicon glyphicon-home' ></span>&nbsp;Retour</a>&nbsp;&nbsp;Bravo ! Vous avez finit !\nTap Touches encore pour faire la techno des années 80.\nPlus que <span class='reste'>16</span> fois.",
+            "minVideo" : 10,
+            "maxVideo" : 21,
+            "textafter" : "",
+            "nextvideo" :  "032" ,
+            "ordermulti" : true,
+            "nbRepeat" : 17,
+            "type" : "multibykeypressed"
+             }
+          }
+    ]
+}

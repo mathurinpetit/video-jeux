@@ -1,0 +1,112 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}video-jeux.fr - {{ game.name }}{% endblock %}
+
+{% block body %}
+
+{% if cookieVal and cookieVidVal %}
+    {% if cookieVidVal and (game.videoPath == cookieVal) %}
+    {% set pathVideoMp4 = 'videos/'~game.videoPath~'/'~cookieVidVal~'.mp4' %}
+    {% set pathVideoWebm = 'videos/'~game.videoPath~'/'~cookieVidVal~'.webm' %}
+    <video id="video_{{cookieVidVal}}" webkit-playsinline >
+       <source src="{{ asset(pathVideoMp4) }}" type='video/mp4'>
+       <source src="{{ asset(pathVideoWebm) }}" type='video/webm'>
+    </video>
+    {% endif %}
+
+{% else %}
+{% set pathVideoMp4 = 'videos/'~game.videoPath~'/'~ game_json.debugstart~'.mp4' %}
+{% set pathVideoWebm = 'videos/'~game.videoPath~'/'~game_json.debugstart~'.webm' %}
+<video id="video_{{game_json.debugstart}}" webkit-playsinline >
+   <source src="{{ asset(pathVideoMp4) }}" type='video/mp4'>
+   <source src="{{ asset(pathVideoWebm) }}" type='video/webm'>
+</video>
+{% endif %}
+
+<div id="retour_accueil" >
+      <a href="{{ path("videogame") }}" class="btn btn-default retour_accueil_btn" style="text-decoration:none; opacity:0.6" rel="external">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;&nbsp;<span class="glyphicon glyphicon-home"></span></a>
+</div>
+
+<div id="divLoading" style="margin: 0px; padding: 0px; position: fixed; right: 0px; top: 0px; width: 100%; height: 100%; z-index: 30001; opacity: 0.8;">
+  <p style="position: absolute; color: White; top: 45%; left: 45%;">
+  <img src="{{ asset('images/'~game.shortName~'.gif') }}"><br/>
+  &nbsp;Chargement...
+  </p>
+</div>
+
+<div id="startButton" style="margin: 0px; padding: 0px; position: fixed; right: 0px; top: 0px; width: 100%; height: 100%; z-index: 30001; background: rgba(0,0,0,.5); " >
+    <div style="position: absolute; left: 45%; top: 45%;">
+        <button class="btn btn-lg btn-dark" style="background-color: #333; color : white; height: 150px; width: 180px;" id="startGame"><strong>COMMENCER&nbsp;<span class="glyphicon glyphicon-play" style="color:#5cb85c;"></span></strong></button>
+    </div>
+</div>
+<div id="dictionnaire" style="{% if urlgame %} width:220px; height: 70%;{% else %}display:none;{% endif %}">
+    <div style="position: relative;">
+      <span style="margin: 0 10px; float:right; width: 80%;" class="text"></span>
+    </div>
+    {% if urlgame %}
+    <div>
+      <span style="margin: 0 10px; float:right; width: 80%;" class="text">
+         {{ game_json.dictionnairetext | nl2br }}
+      </span>
+    </div>
+    <div class="choices" style="margin: 0px 10px;">
+      <select id="select2" style="color:#000; width:200px;" multiple="multiple">
+        <option value=""></option>
+          {% for videoWord in game_json.dictionnaire %}
+            <option value="{{ videoWord.id }}">{{ videoWord.word }}</option>
+          {% endfor %}
+      </select>
+    </div>
+    <br/>
+    <div class="playwords" style="  position: absolute; bottom: 15px; left:10px;">
+      <a id="playSequenceBtn" class="btn btn-success" style="width: 176px" onclick="playSequenceBtn();"><strong>Lecture</strong>
+          <span style="padding-left: 20px;"><span class="glyphicon glyphicon-play"></span></span>
+      </a>
+    </div>
+    <br/>
+    <div  style="  position: absolute; bottom: 100px; left:30px;">
+      <center>
+        <a target="_blank" title="Facebook" href="https://www.facebook.com/sharer.php?u=URLENCODED&t=TITLE" class="share facebook" data-network="facebook" rel="nofollow">
+          <img src="{{ asset('icons/facebook_icon.png') }}" alt="Facebook" />
+        </a>
+        <a target="_blank" title="Twitter" href="https://twitter.com/share?url=URLENCODED&text=TITLE" class="share twitter" data-network="twitter" rel="nofollow" >
+          <img src="{{ asset('icons/twitter_icon.png') }}" alt="Twitter" />
+        </a>
+        <a target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=URLENCODED&title=TITLE" class="share linkedin" data-network="linkedin" rel="nofollow">
+          <img src="{{ asset('icons/linkedin_icon.png') }}" alt="Linkedin" />
+        </a>
+        <a target="_blank" title="Envoyer par mail" href="mailto:?Subject=Laurent à un message! &amp;Body=Salut, je suis Laurent, j'ai un message pour toi : URLENCODED" class="share" data-network="email" rel="nofollow"><img src="{{ asset('icons/email_icon.png') }}" alt="email" /></a>
+      </center>
+    </div>
+    {% endif %}
+</div>
+
+
+   <div id="footer" >
+       <div style="position: relative; left: 20%; max-width: 60%;">
+         <span class="text"></span>
+     </div>
+   </div>
+
+   <div id="skip" style="display:none;">
+     <a href="#" class="btn btn-default skip" style="text-decoration:none;" rel="external">
+       Passer&nbsp;<span class="glyphicon glyphicon-arrow-right"></span>
+     </a>
+   </div>
+
+{% endblock %}
+
+{% block jsgame %}
+  <script type="text/javascript">
+   	{{ include('Engine/gameEngine.js.twig', { 'game': game ,'urlgame' : urlgame, 'mobile' : false}) }}
+   </script>
+{% endblock %}
+
+{% block fblike %}
+{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet"  type="text/css" media="all" href="{{ asset('/css/mainGame.css') }}" />
+{% endblock %}

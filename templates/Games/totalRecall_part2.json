@@ -1,0 +1,275 @@
+{
+ "globaldelay": "600",
+ "debugstart" : "010",
+ "cookie" : true,
+ "gamekeys" : {
+                "A" : {"keys" : [65,97] },
+                "B" : { "keys" : [66,98] },
+                "C" : { "keys" : [67,99] },
+                "D" : { "keys" : [68,100]}
+              },
+              "scenario":[
+              {
+                "id":"010",
+                "onend": {
+                  "text" : "\nMaintenez link 'A' 65 pour faire atterrir le vaisseau sur Mars...",
+                  "textmobile" : "\nTap Appuyer pour faire atterrir le vaisseau sur Mars...",
+                  "nextvideos" : { "A" : "011", "_" : "060"} ,
+                  "videomobiletoplay" :  "011" ,
+                  "nextvideomobile" : "012",
+                  "delay" : 500,
+                  "type" : "playbykey",
+                  "textduring" : "\nMaintenez link 'A' 65 pour faire atterrir le vaisseau sur Mars..."
+                   }
+               },
+               {
+                 "id":"011",
+                 "onend": {
+                  "text" : "\nMaintenez link 'A' 65 pour faire atterrir le vaisseau sur Mars...",
+                  "textmobile" : "\nTap Appuyer pour faire atterrir le vaisseau sur Mars...",
+                  "nextvideos" : { "A" : "012", "_" : "061"} ,
+                  "nextvideomobile" : "012",
+                  "type" : "multichoicebykeypressed"
+                   }
+                },
+               {
+                 "id":"012",
+                 "onstart": { "stopvideo" : "011" },
+                 "onend": {
+                  "text" : "Vous êtes arrivé sur Mars, vous allez passer la douane.\nlink 'A' 65 : Je m'en fou je coupe la file pour aller au concours de Mister Univers.\nlink 'B' 66 : Je suis raisonnable et j'attend mon tour pour montrer mon passeport.\nlink 'C' 67 : Je crois que finalement Mars c'est pas mon truc...",
+                  "textmobile" : "Je grille et je vais à Mr Univers Droite\nGauche J'attend mon tour\nBas Mars c'est pas mon truc...",
+                  "nextvideos" : { "A" : "013", "B" : "014", "_" : "059"} ,
+                  "nextvideosmobile" : { "right" : "013", "left" : "014", "down" : "059"} ,
+                  "type" : "multichoicebykeypressed"
+                   }
+                },
+                {
+                  "id":"013",
+                  "onend": {
+                   "text" : "\nlink 'A' 65 : Revenir sur Mars",
+                   "textmobile" : "\nSe faire arrêter Droite\nGauche Revenir sur Mars",
+                   "nextvideos" : { "A" : "012", "_" : "060"},
+                   "nextvideosmobile" : { "right" : "060", "left" : "012"} ,
+                   "type" : "multichoicebykeypressed"
+                    }
+                 },
+                 {
+                   "id":"014",
+                   "onend": {
+                     "text" : "\nFaites des mouvements de gauche à droite avec la souris pour montrer votre plus beau sourir.",
+                     "textmobile" : "\nTap Appuyer pour faire un beau sourir",
+                     "nextvideos" : { "move" : "015", "aftermove" : "016"} ,
+                     "videomobiletoplay" :  "015",
+                     "nextvideomobile" :  "016",
+                     "type" : "playbymouse"
+                   }
+                 },
+                 {
+                   "id":"015"
+                 },
+                 {
+                   "id":"016",
+                   "onstart": { "stopvideo" : "015" },
+                   "onend": {
+                     "text" : "link 'A' 65 : Je crache sur le douanier.\nlink 'B' 66 : Faire les yeux doux au douanier.\nlink 'C' 67 : Parler en binaire pour impressionner le douanier.",
+                     "textmobile" : "\nJe crache sur le douanier Droite\nGauche Faire les yeux doux au douanier.",
+                     "nextvideos" : { "B" : "017", "C": "041", "_" : "061"} ,
+                     "nextvideosmobile" : { "right" : "061", "left" : "017"} ,
+                     "type" : "multichoicebykeypressed"
+                   }
+                 },
+                  {
+                    "id":"017",
+                    "onend": {
+                     "text" : "\nlink 'A' 65 : Continuer d'avoir l'air normal devant le douanier.\nlink 'B' 66 : Faire une connerie.",
+                     "textmobile" : "\nContinuer d'avoir l'air normal devant le douanier Droite\nGauche Faire une connerie.",
+                     "nextvideos" : { "A" : "018", "B" : "041","_" : "062"} ,
+                     "nextvideosmobile" : { "right" : "018", "left" : "062"} ,
+                     "type" : "multichoicebykeypressed"
+                      }
+                   },
+                   {
+                     "id":"018",
+                     "onend": {
+                      "text" : "\nlink 'A' 65 : Répondre 'Non' (on dis toujours 'non' à un douanier).\nlink 'B' 66 : Répondre 'Deux semaines!' même si ça n'a aucun sens.",
+                      "textmobile" : "\nRépondre 'Non' Droite\nGauche Répondre 'Deux semaines!' même si ça n'a aucun sens.",
+                      "nextvideos" : { "B" : "019", "_" : "059"} ,
+                      "nextvideosmobile" : { "right" : "059", "left" : "019"} ,
+                      "type" : "multichoicebykeypressed"
+                       }
+                    },
+                    {
+                      "id":"019",
+                      "onend": {
+                       "text" : "\nAppuyez sur différentes touches du clavier pour repéter 'Deux semaines'...\nAvoir l'air bizarre encore <span class='reste'>17</span> fois.",
+                       "textmobile" : "Tap Toucher pour repéter 'Deux semaines'...\nAvoir l'air bizarre encore <span class='reste'>17</span> fois.",
+                       "minVideo" : 20,
+                       "maxVideo" : 27,
+                       "nextvideo" :  "028" ,
+                       "textafter" : "",
+                       "type" : "multibykeypressed"
+                        }
+                     },
+                      { "id": "020" }, { "id": "021" }, { "id": "022" }, { "id": "023" }, { "id": "024" }, { "id": "025" }, { "id": "026" }, { "id": "027" },
+                     {
+                       "id":"028",
+                       "onend": {
+                        "text" : "\nFaire diversion en faisant des mouvements de gauche à droite pour secouer la tête rapidement.",
+                        "textmobile" : "\nTap Toucher pour faire pour secouer la tête.",
+                        "nextvideos" : { "move" : "029", "aftermove" : "030"} ,
+                        "videomobiletoplay" :  "029",
+                        "nextvideomobile" :  "030",
+                        "type" : "playbymouse"
+                         }
+                      },
+                      {
+                        "id": "029"
+                      },
+                      {
+                        "id":"030",
+                        "onend": {
+                         "text" : "Vous êtes grillé!\nlink 'A' 65 : Re-répeter 'Deux semaines'.\nlink 'B' 66 : Tan pis, je dévoile mon identité et je dévérouille mon masque.\nlink 'C' 67 : S'enfuir...",
+                          "textmobile" : "Re-répeter 'Deux semaines' Droite \nGauche Tan pis, je dévérouille mon masque.\nBas S'enfuir...",
+                         "nextvideos" : { "A" : "018", "B" : "031", "_" : "061"} ,
+                         "nextvideosmobile" : { "right" : "018", "left" : "031", "down" : "061"} ,
+                         "type" : "multichoicebykeypressed"
+                          }
+                       },
+                       {
+                        "id":"031",
+                        "onend": {
+                          "text" : "\nlink 'A' 65 : Appuyez longement pour enlever votre masque.\nlink 'B' 67 : Ne pas dévoiler son identité.",
+                          "textmobile" : "\nTap Appuyez pour enlever votre masque.",
+                          "nextvideos" : { "A" : "032", "_" : "062"} ,
+                          "videomobiletoplay" : "032" ,
+                          "delay" : 500,
+                          "type" : "playbykey",
+                          "textduring" : "\nlink 'A' 65 : Appuyez longement pour enlever votre masque."
+                           }
+                        },
+                        {
+                          "id":"032",
+                         "onend": {
+                           "text" : "\nlink 'A' 65 : Se débarrasser de son masque et le jeter sur les soldats.",
+                           "textmobile" : "\nTap Jeter le masque sur les soldats.",
+                           "nextvideos" : { "A" : "033", "_" : "061"} ,
+                           "nextvideomobile" : "033",
+                           "type" : "multichoicebykeypressed"
+                            }
+                         },
+                         {
+                           "id":"033",
+                           "onstart": { "stopvideo" : "032" },
+                           "onend": {
+                            "text" : "ATTENTION! Les soldats vont vous renvoyer le masque!\nlink 'A' 65 : J'en ai marre, je préfére aller me la raconter au concours de Mister Univers!.\nlink 'B' 66 : Se tenir prêt à se faire renvoyer le masque. \nlink 'C' 67 : Se laisser arrêter par les soldats. ",
+                             "textmobile" : "Je préfére aller au concours de Mister Univers! Droite\nGauche Se tenir prêt à se faire renvoyer le masque. \nBas Se laisser arrêter par les soldats. ",
+                            "nextvideos" : { "A" : "034", "B" : "035", "_" : "059"} ,
+                            "nextvideosmobile" : { "right" : "034", "left" : "035", "down" : "059"} ,
+                            "type" : "multichoicebykeypressed"
+                             }
+                          },
+                       {
+                         "id":"034",
+                         "onend": {
+                            "text" : "\nlink 'A' 65 : Revenir sur Mars",
+                            "textmobile" : "\nTap Revenir sur Mars",
+                            "nextvideos" : { "A" : "033", "_" : "033"} ,
+                            "videomobiletoplay" : "033" ,
+                            "type" : "multichoicebykeypressed"
+                           }
+                        },
+                        {
+                          "id":"035",
+                          "onend": {
+                            "text" : "link 'A' 65 : Ne rien faire. \nlink 'B' 66 : Re-renvoyer le masque pour jouer.\nlink 'C' 67 : Aller se la raconter au concours de Mister Univers.\nlink 'D' 68 : Se débarrasser pour de bon de ce masque.\n",
+                            "textmobile" : "Re-renvoyer le masque pour jouer Droite\nGauche Aller se la raconter au concours de Mister Univers.\nSe débarrasser pour de bon de ce masque Bas",
+                            "nextvideos" : { "B" : "033","C" : "034","D" : "036", "_" : "061"} ,
+                            "nextvideosmobile" : { "right" : "033", "left" : "034", "down" : "036"} ,
+                            "type" : "multichoicebykeypressed"
+                          }
+                        },
+                        {
+                          "id":"036",
+                          "onend": {
+                           "text" : "\nlink 'A' 65 : Suffit de jouer! Le masque va exploser, il faut fuir.\nlink 'B' 66 : J'en ai marre, je préfére aller me la raconter au concours de Mister Univers!'.",
+                           "textmobile" : "Suffit de jouer! Le masque va exploser, il faut fuir Droite\nGauche Je vais me la raconter au concours de Mister Univers!'.",
+                           "nextvideos" : { "A" : "038","B" : "034", "_" : "060"} ,
+                           "nextvideosmobile" : { "right" : "038", "left" : "034", "down" : "060"} ,
+                           "type" : "multichoicebykeypressed"
+                            }
+                         },
+                         {
+                           "id":"037",
+                           "onend": {
+                            "text" : "Attention...\nlink 'A' 65 : Bon je vais quand même au concours de Mister Univers.\nlink 'B' 66 : Faire exploser mon masque même si c'est dangeureux.\nlink 'C' 67 : Fuir mais ne pas faire exploser le masque.",
+                            "textmobile" : "Aller au concours de Mister Univers Droite\nGauche Faire exploser mon masque même si c'est dangeureux.\nFuir mais ne pas faire exploser le masque Bas",
+                            "nextvideos" : { "A" : "034", "B" : "038", "_" : "062"} ,
+                            "nextvideosmobile" : { "right" : "034", "left" : "038", "down" : "062"} ,
+                            "type" : "multichoicebykeypressed"
+                             }
+                          },
+                        {
+                          "id":"038",
+                          "onend": {
+                           "text" : "link 'A' 65 : Ne rien faire \nlink 'B' 66 : Appuyer sur le bouton pour fermer les SAS.\nlink 'C' 67 : Me téléporter sur Terre pour aller au bistrot.",
+                          "textmobile" : "Ne rien faire Droite\nGauche Appuyer sur le bouton pour fermer les SAS.",
+                          "nextvideos" : { "B" : "039", "C" : "121", "_" : "061"} ,
+                          "nextvideosmobile" : { "left" : "039", "right" : "061"} ,
+                          "type" : "multichoicebykeypressed"
+                            }
+                         },
+                      {
+                       "id":"039",
+                       "onend": {
+                        "text" : "link 'A' 65 : S'enfuir en roulant sous la porte.\nlink 'B' 66 : Me téléporter sur Terre.\nlink 'C' 67 : Abandonner la mission.",
+                        "textmobile" : "S'enfuir en roulant sous la porte Droite\nGauche Abandonner la mission.\n",
+                        "nextvideos" : { "A" : "040", "B" : "121", "_" : "061"} ,
+                        "nextvideosmobile" : { "right" : "040", "left" : "061"} ,
+                        "type" : "multichoicebykeypressed"
+                         }
+                      },
+                    {
+                      "id":"040",
+                      "onend": {
+                       "text" : "\nlink 'A' 65 : Bon je suis peinard, je vais au bar de Mars.\nlink 'B' 66 : Aller plutôt au bar sur Terre en téléportation. ",
+                        "textmobile" : "Bon je vais au bar de Mars Droite\nGauche Abandonner la mission.",
+                       "nextvideos" : { "A" : "redirect totalRecall_part3", "B" : "121", "_" : "059"} ,
+                       "nextvideosmobile" : { "right" : "redirect totalRecall_part3", "left" : "059"} ,
+                       "type" : "multichoicebykeypressed"
+                        }
+                     },
+                     {
+                        "id":"041",
+                        "onend": {
+                         "text" : "link 'A' 65 : Dire 'deux semaines!'\nlink 'B' 66 : Abandonner la mission.\nlink 'C' 67 : Faire les yeux doux au douanier.",
+                         "textmobile" : "Dire 'deux semaines!' Droite\nGauche Abandonner la mission.\n",
+                         "nextvideos" : { "A" : "019","C" : "017", "_" : "061"} ,
+                         "nextvideosmobile" : { "right" : "019", "left" : "061"} ,
+                         "type" : "multichoicebykeypressed"
+                          }
+                       },
+                       {
+                          "id":"121",
+                          "onend": {
+                           "text" : "Ma téléportation est finie... Merde je suis à poils !\nlink 'A' 65' : Je vais au bar ! Il me faut des habits !\nlink 'B' 66' : Je me les pèle ! Je retourne sur Mars !",
+                           "nextvideos" : { "A" : "122", "_" : "redirect totalRecall_part3" } ,
+                           "type" : "multichoicebykeypressed"
+                            }
+                         },
+                         {
+                            "id":"122",
+                            "onend": {
+                             "text" : "\nlink 'A' 65' : Bon rien d'intéressant ici, je vais au bar sur Mars...",
+                             "nextvideos" : { "A" : "redirect totalRecall_part3", "_" : "redirect totalRecall_part3" },
+                             "type" : "multichoicebykeypressed"
+                              }
+                           }
+  ],
+  "gameovers":{
+    "idmin" : 59,
+    "idmax" : 62,
+      "text" : "\nVous avez perdu !Pour rejouer la dernière séquence clicker ici : <a href='#' class='btn btn-xs btn-default' style='text-decoration:none' onClick='restartOnLastCheckpoint(); return false;'><span class='glyphicon glyphicon-repeat'></span>&nbsp;Rejouer</a>\nOu appuyez sur 'ESPACE'.",
+    "textmobile": "\nVous avez perdu !\nTap Pour rejouer!"
+     }
+
+}

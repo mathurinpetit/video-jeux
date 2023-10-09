@@ -1,0 +1,28 @@
+{% autoescape %}
+var pathGame = "{{ '/videos/'~game.videoPath~'/' | raw }}";
+{% endautoescape %}
+
+{{ include('Engine/gamelib.js.twig') }}
+var debug = false;
+var debug_script   = false;
+var game_json = {{ include('Games/'~game.shortName~'.json', { 'game': game }) }};
+var gamekeys = game_json.gamekeys;
+
+var anchor = window.location.hash;
+var anchorValue = anchor.substring(anchor.indexOf("#")+1);
+
+var firstVideoNumber = game_json.debugstart ;
+
+if(anchorValue){
+  debug = true;
+  firstVideoNumber = anchorValue;
+}
+
+video = document.getElementById( 'video_'+ firstVideoNumber );
+var lastVideoPlayed = { "val" : game_json.debugstart };
+
+if(debug){
+  video.onloadedmetadata = function() {
+    video.currentTime = ""+video.duration - 0.1;
+  };
+}

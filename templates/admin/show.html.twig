@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container theme-showcase" role="main">
+    <h1>Jeu : {{ game.name }}</h1>
+    <div class="row">
+
+      <div class="col-md-12">
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ game.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ game.name }}</td>
+            </tr>
+            <tr>
+                <th>Nom court</th>
+                <td>{{ game.shortName }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ game.description }}</td>
+            </tr>
+            <tr>
+                <th>Mobile description</th>
+                <td>{{ game.mobiledescription }}</td>
+            </tr>
+            <tr>
+                <th>Videos path</th>
+                <td>{{ game.videoPath }}</td>
+            </tr>
+            <tr>
+                <th>Format</th>
+                <td>{{ game.width }}x{{ game.height }}</td>
+            </tr>
+            <tr>
+                <th>Visible</th>
+                <td>{{ "%01d" | format(game.visible) }}</td>
+            </tr>
+            <tr>
+                <th>Actif</th>
+                <td>{{ "%01d" | format(game.active) }}</td>
+            </tr>
+            <tr>
+                <th>Mobile</th>
+                <td>{{ "%01d" | format(game.optimiseMobile) }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ game.date | date("d/m/Y") }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="col-xs-12">
+  <div class="row">
+    <div class="col-xs-6 text-left">
+      <a href="{{ path('admin_index') }}"  class="btn btn-default">Retour</a>
+    </div>
+    <div class="col-xs-6 text-right">
+          {{ form_start(delete_form) }}
+              <button type="submit" class="btn btn-danger pull-right" onclick="alert('attention!')"><i class="glyphicon glyphicon-remove"></i></button>
+          {{ form_end(delete_form) }}&nbsp;
+          <a href="{{ path('admin_edit', { 'id': game.id }) }}" class="btn btn-warning pull-right"><span class="glyphicon glyphicon-pencil"></span></a>
+
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+{% endblock %}
