@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use MobileDetectBundle\DeviceDetector\MobileDetectorInterface;
 
 use Doctrine\ORM\EntityManagerInterface;
 
@@ -23,7 +24,8 @@ class VideoGameController extends AbstractController
      */
     public function index(EntityManagerInterface $entityManager): Response
      {
-      $isMobile = false;
+      $detect = new \Detection\MobileDetect;
+      $isMobile = $detect->isMobile();
       $debug = $this->getParameter('debug');
       if($isMobile && !$debug){
         return $this->redirectToRoute('videogame_mobile');
@@ -43,7 +45,8 @@ class VideoGameController extends AbstractController
      */
     public function indexMobile(Request $request) {
       $debug = $this->getParameter('debug');
-      $isMobile = false;
+       $detect = new \Detection\MobileDetect;
+       $isMobile = $detect->isMobile();
       if(!$isMobile && !$debug){
           return $this->redirectToRoute('videogame');
       }
@@ -76,7 +79,8 @@ class VideoGameController extends AbstractController
      */
     public function game(Request $request, $idName) {
       $debug = $this->getParameter('debug');
-      $isMobile = false;
+       $detect = new \Detection\MobileDetect;
+       $isMobile = $detect->isMobile();
       if($isMobile && !$debug){
           $texte = $request->query->get("texte");
           if($texte){
@@ -108,7 +112,9 @@ class VideoGameController extends AbstractController
      */
     public function mobileGame(Request $request, $idName) {
       $debug = $this->getParameter('debug');
-      $isMobile = true;
+
+       $detect = new \Detection\MobileDetect;
+       $isMobile = $detect->isMobile();
       if(!$isMobile && !$debug){
         $texte = $request->query->get("texte");
         if($texte){

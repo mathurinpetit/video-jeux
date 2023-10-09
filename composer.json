@@ -10,6 +10,7 @@
         "doctrine/annotations": "^2.0",
         "doctrine/doctrine-bundle": "^2.10",
         "doctrine/orm": "^2.16",
+        "mobiledetect/mobiledetectlib": "^3.74",
         "symfony/asset": "^5.4",
         "symfony/console": "5.4.*",
         "symfony/dotenv": "5.4.*",
