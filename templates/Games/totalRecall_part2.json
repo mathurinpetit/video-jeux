@@ -13,7 +13,7 @@
                 "id":"010",
                 "onend": {
                   "text" : "\nMaintenez link 'A' 65 pour faire atterrir le vaisseau sur Mars...",
-                  "textmobile" : "\nTap Appuyer pour faire atterrir le vaisseau sur Mars...",
+                  "textmobile" : "\nTap Tapotez pour faire atterrir le vaisseau sur Mars...",
                   "nextvideos" : { "A" : "011", "_" : "060"} ,
                   "videomobiletoplay" :  "011" ,
                   "nextvideomobile" : "012",
@@ -26,7 +26,7 @@
                  "id":"011",
                  "onend": {
                   "text" : "\nMaintenez link 'A' 65 pour faire atterrir le vaisseau sur Mars...",
-                  "textmobile" : "\nTap Appuyer pour faire atterrir le vaisseau sur Mars...",
+                  "textmobile" : "\nTap Tapotez pour faire atterrir le vaisseau sur Mars...",
                   "nextvideos" : { "A" : "012", "_" : "061"} ,
                   "nextvideomobile" : "012",
                   "type" : "multichoicebykeypressed"
@@ -57,7 +57,7 @@
                    "id":"014",
                    "onend": {
                      "text" : "\nFaites des mouvements de gauche à droite avec la souris pour montrer votre plus beau sourir.",
-                     "textmobile" : "\nTap Appuyer pour faire un beau sourir",
+                     "textmobile" : "\nTap Tapotez pour faire un beau sourir",
                      "nextvideos" : { "move" : "015", "aftermove" : "016"} ,
                      "videomobiletoplay" :  "015",
                      "nextvideomobile" :  "016",
@@ -115,7 +115,7 @@
                        "id":"028",
                        "onend": {
                         "text" : "\nFaire diversion en faisant des mouvements de gauche à droite pour secouer la tête rapidement.",
-                        "textmobile" : "\nTap Toucher pour faire pour secouer la tête.",
+                        "textmobile" : "\nTap Tapoter pour faire pour secouer la tête.",
                         "nextvideos" : { "move" : "029", "aftermove" : "030"} ,
                         "videomobiletoplay" :  "029",
                         "nextvideomobile" :  "030",
@@ -139,12 +139,12 @@
                         "id":"031",
                         "onend": {
                           "text" : "\nlink 'A' 65 : Appuyez longement pour enlever votre masque.\nlink 'B' 67 : Ne pas dévoiler son identité.",
-                          "textmobile" : "\nTap Appuyez pour enlever votre masque.",
+                          "textmobile" : "\nTap Tapotez pour enlever votre masque.",
                           "nextvideos" : { "A" : "032", "_" : "062"} ,
                           "videomobiletoplay" : "032" ,
-                          "delay" : 500,
+                          "delay" : 1000,
                           "type" : "playbykey",
-                          "textduring" : "\nlink 'A' 65 : Appuyez longement pour enlever votre masque."
+                          "textduring" : "\nlink 'A' 65 : Tapotez longement pour enlever votre masque."
                            }
                         },
                         {
