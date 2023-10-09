@@ -45,8 +45,8 @@ class VideoGameController extends AbstractController
      */
     public function indexMobile(Request $request) {
       $debug = $this->getParameter('debug');
-       $detect = new \Detection\MobileDetect;
-       $isMobile = $detect->isMobile();
+      $detect = new \Detection\MobileDetect;
+      $isMobile = $detect->isMobile();
       if(!$isMobile && !$debug){
           return $this->redirectToRoute('videogame');
       }
@@ -79,8 +79,8 @@ class VideoGameController extends AbstractController
      */
     public function game(Request $request, $idName) {
       $debug = $this->getParameter('debug');
-       $detect = new \Detection\MobileDetect;
-       $isMobile = $detect->isMobile();
+      $detect = new \Detection\MobileDetect;
+      $isMobile = $detect->isMobile();
       if($isMobile && !$debug){
           $texte = $request->query->get("texte");
           if($texte){
@@ -143,7 +143,7 @@ class VideoGameController extends AbstractController
 
     private function setCookies(Request $request,$game){
       $this->cookieVal = $request->cookies->get($game->getName());
-      $this->cookieVidVal = ($this->cookieVal)? $request->cookies->get($cookieVal) : '';
+      $this->cookieVidVal = ($this->cookieVal)? $request->cookies->get($this->cookieVal) : '';
     }
 
 }
