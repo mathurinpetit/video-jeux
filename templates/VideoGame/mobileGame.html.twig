@@ -5,23 +5,24 @@
 {% endblock %}
 {% block body %}
 
-{% if cookieVal and cookieVidVal %}
-    {% if cookieVidVal and (game.videoPath == cookieVal) %}
+{% if cookieVal and cookieVidVal and (game.videoPath == cookieVal) %}
     {% set pathVideoMp4 = 'videos/'~game.videoPath~'/'~cookieVidVal~'.mp4' %}
     {% set pathVideoWebm = 'videos/'~game.videoPath~'/'~cookieVidVal~'.webm' %}
     <video id="video_{{cookieVidVal}}" webkit-playsinline >
        <source src="{{ asset(pathVideoMp4) }}" type='video/mp4'>
        <source src="{{ asset(pathVideoWebm) }}" type='video/webm'>
     </video>
-    {% endif %}
 
 {% else %}
+
 {% set pathVideoMp4 = 'videos/'~game.videoPath~'/'~ game_json.debugstart~'.mp4' %}
 {% set pathVideoWebm = 'videos/'~game.videoPath~'/'~game_json.debugstart~'.webm' %}
+
 <video id="video_{{game_json.debugstart}}" webkit-playsinline >
    <source src="{{ asset(pathVideoMp4) }}" type='video/mp4'>
    <source src="{{ asset(pathVideoWebm) }}" type='video/webm'>
 </video>
+
 {% endif %}
 
 <div class="mobileHeadLeft" >
