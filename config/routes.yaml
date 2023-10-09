@@ -1,3 +1,60 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+videogame:
+    path: /
+    controller: App\Controller\VideoGameController::index
+
+videogame_mobile:
+     path:  /mobile
+     controller: App\Controller\VideoGameController::indexMobile
+     requirements:
+        _method:  GET
+
+videogame_apropos:
+     path:  /apropos
+     controller: App\Controller\VideoGameController::aPropos
+     requirements:
+        _method:  GET
+
+
+game:
+    path:  /game/{idName}
+    controller: App\Controller\VideoGameController::game
+    requirements:
+       _method:  GET
+
+mobile_game:
+    path:  /game/m/{idName}
+    controller: App\Controller\VideoGameController::mobileGame
+    requirements:
+       _method:  GET
+
+
+
+admin_index:
+    path:  /admin
+    controller: App\Controller\GameController::index
+    requirements:
+       _method:  GET
+
+admin_new:
+    path:  /admin-new
+    controller: App\Controller\GameController::new
+    requirements:
+       _method:  GET,POST
+
+admin_show:
+    path:  /admin-show/{id}
+    controller: App\Controller\GameController::show
+    requirements:
+       _method:  GET
+
+admin_edit:
+    path:  /admin-edit/{id}
+    controller: App\Controller\GameController::edit
+    requirements:
+       _method:  GET,POST
+
+admin_delete:
+    path:  /admin-delete/{id}
+    controller: App\Controller\GameController::delete
+    requirements:
+       _method:  GET,POST
