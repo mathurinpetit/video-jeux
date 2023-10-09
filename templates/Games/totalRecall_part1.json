@@ -54,7 +54,7 @@
          "id":"004",
          "onend": {
            "text" : "\nlink 'A' 65 : J'arrête tout de suite ça fait mal!\nlink 'B' 66 : Sortir le truc de son nez...",
-           "textmobile" : "Tap Toucher doucement pour sortir l'émetteur du nez",
+           "textmobile" : "Tap Tapotez pour sortir l'émetteur du nez",
            "nextvideos" : { "B" : "005", "_" : "058"} ,
            "videomobiletoplay" : "005" ,
            "nextvideomobile" : "006",
@@ -67,7 +67,7 @@
           "id":"005",
           "onend": {
             "text" : "\nlink 'B' 66 : Appuyez longuement sur link 'B' 66 pour sortir l'émetteur de votre nez",
-            "textmobile" : "Tap Toucher doucement pour sortir l'émetteur du nez",
+            "textmobile" : "Tap Tapotez pour sortir l'émetteur du nez",
             "nextvideos" : { "B" : "006", "_" : "057"} ,
             "type" : "multichoicebykeypressed"
              }
@@ -97,7 +97,7 @@
                }
             },
             {
-              "id":"008", 
+              "id":"008",
              "onend": {
                "text" : "De quoi tu parles?\nlink 'A' 65 : J'ai pas bien compris ce que je dois faire en fait.\nlink 'B' 66 : Ca va pas la tête je ne mettrai jamais les pieds sur Mars!\nlink 'C' 67 : Accepter la mission et aller sur Mars.",
                "textmobile" : "Haut Accepter la mission et aller sur Mars\nJ'ai pas bien compris ce que je dois faire en fait Droite\nGauche Je ne mettrai jamais les pieds sur Mars!",
