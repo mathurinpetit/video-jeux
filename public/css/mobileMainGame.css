@@ -31,12 +31,13 @@ video{
 }
 
 .small-footer {
-  height: 40px !important;
+  height: 60px !important;
+  bottom: 0;
 }
 
 #dictionnairemobile .select2-selection
 {
-  
+
 }
 
 .select2-selection{
