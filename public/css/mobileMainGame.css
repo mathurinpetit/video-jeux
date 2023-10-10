@@ -16,17 +16,24 @@ video{
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 80%;
+    height: 90%;
     width: 120px;
     font-size: 12px;
     text-align: left;
     background: #333;
 }
 
+
 #selectionsSelect2 {
     position: absolute;
     top: 22px;
 }
+
+#dictionnairemobile .select2-selection
+{
+  height: 220px;
+}
+
 .select2-selection{
     min-height: 60px !important;
 }
