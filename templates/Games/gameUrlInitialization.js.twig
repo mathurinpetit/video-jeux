@@ -19,14 +19,11 @@ function addWord(data, majurl = false){
     var html = '<a class="btn btn-xs btn-default" onClick="removeWord($(this));" title="'+data.text+'" style="margin-right:5px; margin-top:5px;" ><strong><span class="text-muted" role="presentation">×</span>&nbsp;'+data.text+'</strong></a>';
 
      wordsToSay.push(data);
-     if(!mobile){
-         $("#footer > div > span").html($("#footer > div > span").html()+html);
-     }else{
-         html = '<a class="btn btn-xs btn-default" onClick="removeWordMobile($(this));" title="'+data.text+'" style="margin-right:5px; margin-top:5px;" ><strong><span class="text-muted" role="presentation">×</span>&nbsp;'+data.text+'</strong></a>';
-         $("#selectionsSelect2").html($("#selectionsSelect2").html()+html);
+     $("#footer > div > span").html($("#footer > div > span").html()+html);
+     if($("#select2").length){
+       $("#select2").val("").trigger("change");
+       $("#select2-mobile").val("").trigger("change");
      }
-     $("#select2").val("").trigger("change");
-     $("#select2-mobile").val("").trigger("change");
      if(majurl){
          rebuildUrlFromWords();
          changeVideo(pathGame,""+data.id, 'infini',false,200,false);
@@ -96,7 +93,7 @@ function createParamsUrl(){
 
 function get_short_url()
 {
-    return "http://"+window.location.host+window.location.pathname+"?msg="+utoa(createParamsUrl());
+    return "https://"+window.location.host+window.location.pathname+"?msg="+utoa(createParamsUrl());
 }
 
 function show_short_url()
@@ -203,6 +200,20 @@ $('#select2').on('select2:select', function (e) {
   addWord(word,true);
 });
 
+
+$('.choices .word').each(function(){
+
+  $(this).on('click',function(e){
+  var id = $(this).attr("id");
+  var text = $(this).attr("data-text");
+  console.log(id,text);
+  var word = { "text" : text, "id" : id }
+  addWord(word,true);
+  });
+
+});
+
+/* A virer
 $('#select2-mobile').on('select2:select', function (e) {
 
   var data = e.params.data;
@@ -210,6 +221,13 @@ $('#select2-mobile').on('select2:select', function (e) {
   addWord(word,true);
 });
 
+$('#select2-mobile').on('select2:select', function (e) {
+
+  var data = e.params.data;
+  var word = { "text" : data.text, "id" : data.id }
+  addWord(word,true);
+});
+*/
 
 $(document).ready(function(){
     initSelect2();

@@ -45,12 +45,6 @@
     </div>
 </div>
 
-<div id="divLoading" style="margin: 0px; padding: 0px; position: fixed; right: 0px; top: 0px; width: 100%; height: 100%; z-index: 30001; opacity: 0.8;">
-  <p style="position: absolute; color: White; top: 35%; left: 40%;">
-  <img src="{{ asset('images/'~game.shortName~'.gif') }}"><br/>
-  &nbsp;Chargement...
-  </p>
-</div>
 
 <div class="FSButtonHelperPanel" style="display:none;">
     <div style="margin: 0px; padding: 0px; position: fixed; left: 0px; top: 0px; width: 75%; height: 40px; z-index: 30001; opacity: 0.8; background-color:#000;"></div>
@@ -109,33 +103,29 @@
 
       </p>
 
-        <div class="choices" style="margin: 0px 5px;">
-          <select id="select2-mobile" style="color:#000; width:100%; height: 100px;" multiple="multiple" readonly="readonly">
-            <option value=""></option>
+        <div class="choices" style="margin: 0px 5px 10px;">
               {% for videoWord in game_json.dictionnaire %}
-                <option value="{{ videoWord.id }}">{{ videoWord.word }}</option>
+                <span class="btn btn-default btn-xs word" style="margin-bottom:2px;" id="{{ videoWord.id }}" data-text="{{ videoWord.word }}">{{ videoWord.word }}</span>
               {% endfor %}
-          </select>
-          <span id="selectionsSelect2"></span>
         </div>
+        <br/>
 
         <p style="margin: 0 10px 5px; bottom: 0" >
-          <a id="playSequenceBtn" class="btn btn-xs btn-success" onclick="playSequenceBtn(); return false;" style="font-size: 10px;line-height: 1.4; font-weight:bold;margin-top:2px;margin-right:2px;">Lire&nbsp;<span class="glyphicon glyphicon-play"></span></a>
-          <button data-toggle="modal" data-target="#sharePopup" class="popupPartage btn btn-xs btn-primary" style="font-size: 10px;line-height: 1.4; font-weight:bold;margin-top:2px;margin-right:5px;">
-                  <strong>Partager</strong>&nbsp;<object type="image/svg+xml" data="{{ asset('share.svg') }}" width="10" height="10" color="white"></object>
+          <a id="playSequenceBtn" class="btn btn-xs btn-success" onclick="playSequenceBtn(); return false;" width="16" height="16" style="font-size: 10px;line-height: 2.2; height: 28px; font-weight:bold;padding-top:2px;margin-right:2px;">Lire&nbsp;<span class="glyphicon glyphicon-play"></span></a>
+          <button data-toggle="modal" data-target="#sharePopup" class="popupPartage btn btn-xs btn-primary" style="font-size: 10px;line-height: 1.4; font-weight:bold;padding-top:5px;margin-right:5px;">
+                  <object type="image/svg+xml" data="{{ asset('share.svg') }}" width="16" height="16" color="white"></object>
           </button>
         </p>
 
     </div>
 </div>
-{% else %}
+{% endif %}
 
-   <div id="footer" >
+   <div id="footer" {% if urlgame %}class="small-footer"{% endif %} >
        <div style="position: relative; left: 2%; max-width: 96%;">
          <span class="text" style="font-size : 9pt;"></span>
      </div>
    </div>
-{% endif %}
 
 
    <div id="skip" style="display:none;">

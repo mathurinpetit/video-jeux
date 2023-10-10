@@ -14,9 +14,10 @@ video{
 
 #dictionnairemobile {
     position: absolute;
-    bottom: 0;
+    bottom: 16%;
+    z-index: 1000;
     left: 0;
-    height: 90%;
+    height: 70%;
     width: 120px;
     font-size: 12px;
     text-align: left;
@@ -29,9 +30,13 @@ video{
     top: 22px;
 }
 
+.small-footer {
+  height: 40px !important;
+}
+
 #dictionnairemobile .select2-selection
 {
-  height: 220px;
+  
 }
 
 .select2-selection{
