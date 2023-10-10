@@ -16,8 +16,8 @@ video{
     position: absolute;
     bottom: 0;
     left: 0;
-    right: 0;
-    height: 85px;
+    height: 80%;
+    width: 120px;
     font-size: 12px;
     text-align: left;
     background: #333;

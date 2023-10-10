@@ -1,5 +1,20 @@
 var wordsToSay = [];
 
+function hideKeyBoard(element){
+  element.attr('readonly','readonly');
+  element.attr('disabled', true);
+  setTimeout(function(){
+    element.blur();
+    element.removeAttr('readonly');
+    element.removeAttr('disabled');
+  }, 100);
+  setTimeout(function(){
+    $('video').trigger('touch');
+  }, 50);
+
+}
+
+
 function addWord(data, majurl = false){
     var html = '<a class="btn btn-xs btn-default" onClick="removeWord($(this));" title="'+data.text+'" style="margin-right:5px; margin-top:5px;" ><strong><span class="text-muted" role="presentation">×</span>&nbsp;'+data.text+'</strong></a>';
 
@@ -165,7 +180,16 @@ function initSelect2(){
       }
 
 }
-
+$(document).on('focus', '.select2', function(){
+  if ('virtualKeyboard' in navigator) {
+    $('.select2').each(function(){
+       hideKeyBoard($(this));
+    })
+    //navigator.virtualKeyboard.hide();
+  }else {
+    console.log('no virtualKeyboard API');
+  }
+});
 
 $('#select2').on('select2:select', function (e) {
   var data = e.params.data;
@@ -174,9 +198,11 @@ $('#select2').on('select2:select', function (e) {
 });
 
 $('#select2-mobile').on('select2:select', function (e) {
+
   var data = e.params.data;
   var word = { "text" : data.text, "id" : data.id }
   addWord(word,true);
+  hideKeyBoard($('.choices'));
 });
 
 
