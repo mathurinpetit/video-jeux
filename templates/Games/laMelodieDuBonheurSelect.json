@@ -5,24 +5,25 @@
  "urlgame" : true,
  "dictionnairetext" :  "\nChoississez ici \ndes mots \n \n",
  "dictionnaire" : [
-                    { "word" : "sol",
-                      "id" : "001"
-                    },
+
                     { "word" : "do",
                       "id" : "002"
-                    },
-                    { "word" : "la",
-                      "id" : "003"
-                    },
-                    { "word" : "fa",
-                      "id" : "004"
-                    },
-                    { "word" : "mi",
-                      "id" : "005"
                     },
                     {
                       "word" : "ré",
                       "id" : "007"
+                    },
+                    { "word" : "mi",
+                      "id" : "005"
+                    },
+                    { "word" : "fa",
+                      "id" : "004"
+                    },
+                    { "word" : "sol",
+                      "id" : "001"
+                    },
+                    { "word" : "la",
+                      "id" : "003"
                     },
                     { "word" : "si",
                     "id" : "011"
