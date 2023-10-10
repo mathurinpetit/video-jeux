@@ -176,14 +176,20 @@ function initSelect2(){
               placeholder: "",
               allowClear: true,
               closeOnSelect: true,
+              minimumResultsForSearch: Infinity
           });
       }
+
+      $('#dictionnairemobile').on('select2:opening select2:closing', function( event ) {
+          var $searchfield = $(this).parent().find('.select2-search__field');
+          $searchfield.prop('disabled', true);
+      });
 
 }
 $(document).on('focus', '.select2', function(){
   if ('virtualKeyboard' in navigator) {
     $('.select2').each(function(){
-       hideKeyBoard($(this));
+    //   hideKeyBoard($(this));
     })
     //navigator.virtualKeyboard.hide();
   }else {
@@ -202,7 +208,6 @@ $('#select2-mobile').on('select2:select', function (e) {
   var data = e.params.data;
   var word = { "text" : data.text, "id" : data.id }
   addWord(word,true);
-  hideKeyBoard($('.choices'));
 });
 
 
