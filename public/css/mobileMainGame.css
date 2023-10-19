@@ -51,6 +51,10 @@ video{
     width: 180px;
 }
 
+.turn-mobile{
+  height: 200px;
+}
+
 .positionPortrait {
     position: absolute;
     left: 26%;
