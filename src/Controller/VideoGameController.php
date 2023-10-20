@@ -50,6 +50,7 @@ class VideoGameController extends AbstractController
       if(!$isMobile && !$debug){
           return $this->redirectToRoute('videogame');
       }
+
       $em = $this->getDoctrine()->getManager();
       $navigator = $request->get('navigator');
       $games = $em->getRepository(Game::class)->findBy(
@@ -57,7 +58,7 @@ class VideoGameController extends AbstractController
         array('date' => 'DESC')
         );
 
-      return $this->render('VideoGame/indexMobile.html.twig', ["games" => $games,"navigator" => 0]);
+      return $this->render('VideoGame/indexMobile.html.twig', ["games" => $games,"navigator" => 0, "iphone" => $detect->is('iPhone')]);
     }
 
     /**
@@ -122,6 +123,7 @@ class VideoGameController extends AbstractController
         }
         return $this->redirectToRoute('game',array('idName' => $idName));
       }
+
       $em = $this->getDoctrine()->getManager();
       $game = $em->getRepository(Game::class)->findOneByShortName($idName);
       $game_json = json_decode(file_get_contents($this->getParameter('kernel.project_dir') . '/templates/Games/'.$game->getShortName().'.json'));
@@ -138,7 +140,7 @@ class VideoGameController extends AbstractController
       }
       ksort($idsVideos);
       $this->setCookies($request,$game);
-      return $this->render('VideoGame/mobileGame.html.twig', ['game' => $game, "idsVideos" => $idsVideos,"urlgame" => $urlgame, 'game_json' => $game_json, 'cookieVal' => $this->cookieVal,'cookieVidVal' => $this->cookieVidVal]);
+      return $this->render('VideoGame/mobileGame.html.twig', ['game' => $game, "idsVideos" => $idsVideos,"urlgame" => $urlgame, 'game_json' => $game_json, 'cookieVal' => $this->cookieVal,'cookieVidVal' => $this->cookieVidVal, "iphone" => $detect->is('iPhone')]);
     }
 
     private function setCookies(Request $request,$game){

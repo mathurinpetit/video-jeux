@@ -61,6 +61,12 @@ video{
     top: 30%;
 }
 
+.iphonePanel {
+    position: absolute;
+    left: 12%;
+    top: 30%;
+}
+
 .positionLandscape {
     position: absolute;
     left: 40%;
