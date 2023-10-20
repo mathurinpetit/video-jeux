@@ -95,9 +95,12 @@ function changeVideo(pathGame, numberVideo, footerDelay = 0, pause = false, paus
   if(footerDelay == 'infini'){ return; }
   if(!mobile){
       $( "#footer" ).animate({
-          bottom: "-80px"
+          bottom: "-140px"
     }, footerDelay);
   }else{
+    $( "#footer" ).animate({
+        bottom: "-110px"
+  }, footerDelay);
       $( "#footer" ).hide();
   }
   initDivLoadingShowHide(videoElt);
@@ -163,17 +166,20 @@ function undisplaySkipBtn(){
 }
 
 function loadText(textStr,footerDelay,ismobile = false){
-  var text = textStr.replaceAll("\n", "<br/>");
+var text = textStr.replaceAll("\n", "<br/>");
 
 if(!ismobile){
-    var pattern = /link ('[A-Z]+') ([0-9]+)?/ig;
+    var pattern = /link ('[A-Z]+') ([0-9]+)? : (.*?)<br\/>/ig;
     var matches = text.match(pattern);
     if(matches){
       for (var i = 0; i < matches.length; i++) {
         var match = matches[i];
-        var fct = match.replace(/link ('[A-Z]+') ([0-9]+)?/ig,"renderLink($1,$2)");
+        var fct = match.replace(/link ('[A-Z]+') ([0-9]+) : (.*)<br\/>/ig,"renderLink($1,$2,\"$3\");");
         var link = eval(fct);
+
         text = text.replaceAll(match,link);
+        if(i==1) text=text+"<br/>";
+
       }
     }
   }else{
@@ -222,8 +228,24 @@ function loadDictionnaire(dictionnairetxt,delay){
   }
 }
 
-function renderLink(str,code){
-  return "\"<a href='#' onClick='triggerKeypress("+code+"); return false;' style='color:#fff;' >"+str+"</a>\"";
+function renderLink(key,code,str){
+  var btnColor = 'btn-default';
+  var pullRight = "";
+  if(key == "A"){
+    btnColor = 'btn-success';
+  }
+  if(key == "B"){
+    btnColor = 'btn-warning';
+    pullRight = 'float: right;';
+  }
+  if(key == "C"){
+    btnColor = 'btn-danger';
+  }
+  if(key == "D"){
+    btnColor = 'btn-info';
+    pullRight = 'float: right;';
+  }
+  return "<a href='#' onClick='triggerKeypress("+code+"); return false;' class='btn btn-lg "+btnColor+" ' style=' "+pullRight+" text-decoration:none; margin: 5px;' >"+str.replaceAll("'", "\'")+"</a>";
 }
 
 function initDivLoadingShowHide(video){

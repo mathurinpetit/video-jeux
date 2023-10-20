@@ -9,7 +9,7 @@ Number.prototype.zeroPad = Number.prototype.zeroPad ||
 /** prototype pour les string tout remplacer */
 String.prototype.replaceAll = function(search, replacement) {
     var target = this;
-    return target.replace(new RegExp(search, 'ig'), replacement);
+    return target.replace(new RegExp(search.replace(/[/\-\\^$*+?.()|[\]{}]/g, '\\$&'), 'ig'), replacement); 
 };
 
 

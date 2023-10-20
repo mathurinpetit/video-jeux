@@ -36,7 +36,7 @@
                  "id":"012",
                  "onstart": { "stopvideo" : "011" },
                  "onend": {
-                  "text" : "Vous êtes arrivé sur Mars, vous allez passer la douane.\nlink 'A' 65 : Je m'en fou je coupe la file pour aller au concours de Mister Univers.\nlink 'B' 66 : Je suis raisonnable et j'attend mon tour pour montrer mon passeport.\nlink 'C' 67 : Je crois que finalement Mars c'est pas mon truc...",
+                  "text" : "Vous êtes arrivé sur Mars, vous allez passer la douane, que faites vous ?\nlink 'A' 65 : Je m'en fou de Mars, je vais au concours de Mister Univers.\nlink 'B' 66 : Je suis raisonnable et j'attend mon tour pour montrer mon passeport.\nlink 'C' 67 : Je crois que finalement Mars c'est pas mon truc...\n",
                   "textmobile" : "Je grille et je vais à Mr Univers Droite\nGauche J'attend mon tour\nBas Mars c'est pas mon truc...",
                   "nextvideos" : { "A" : "013", "B" : "014", "_" : "059"} ,
                   "nextvideosmobile" : { "right" : "013", "left" : "014", "down" : "059"} ,
@@ -46,7 +46,7 @@
                 {
                   "id":"013",
                   "onend": {
-                   "text" : "\nlink 'A' 65 : Revenir sur Mars",
+                   "text" : "\nlink 'A' 65 : Revenir sur Mars\n",
                    "textmobile" : "\nSe faire arrêter Droite\nGauche Revenir sur Mars",
                    "nextvideos" : { "A" : "012", "_" : "060"},
                    "nextvideosmobile" : { "right" : "060", "left" : "012"} ,
@@ -56,7 +56,7 @@
                  {
                    "id":"014",
                    "onend": {
-                     "text" : "\nFaites des mouvements de gauche à droite avec la souris pour montrer votre plus beau sourir.",
+                     "text" : "\nFaites des mouvements de gauche à droite avec la souris pour montrer votre plus beau sourir.\n",
                      "textmobile" : "\nTap Tapotez pour faire un beau sourir",
                      "nextvideos" : { "move" : "015", "aftermove" : "016"} ,
                      "videomobiletoplay" :  "015",

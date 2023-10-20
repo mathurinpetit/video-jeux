@@ -18,10 +18,14 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  height:80px;
+  height:140px;
   font-size: 17px;
   text-align: left;
   background:#333;
+}
+
+#footer.mobile {
+  height:110px;
 }
 
 #dictionnaire {
