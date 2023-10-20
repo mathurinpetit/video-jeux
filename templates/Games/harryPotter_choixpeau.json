@@ -1,0 +1,155 @@
+{
+ "globaldelay": "600",
+ "debugstart" : "001",
+ "cookie" : true,
+ "gamekeys" : {
+                "A" : {"keys" : [65,97] },
+                "B" : { "keys" : [66,98] },
+                "C" : { "keys" : [67,99] },
+                "D" : { "keys" : [68,100]}
+              },
+"scenario":[
+    {
+     "id":"001",
+     "onend": {
+      "text" : "\nFaire des mouvements de souris de gauche à droite pour avancer dans la Grande salle de Poudlard.",
+      "textmobile" : "\nTap Tapoter pour faire pour secouer la tête.",
+      "nextvideos" : { "move" : "002", "aftermove" : "003"} ,
+      "videomobiletoplay" :  "002",
+      "nextvideomobile" :  "003",
+      "type" : "playbymouse"
+       }
+     },
+     {
+       "id": "002"
+     },
+     {
+      "id":"003",
+      "onend": {
+        "text" : "Le professeur Dumbledore va énoncer quelques points du règlement intérieur de Poudlard\nlink 'A' 65 : Je l'écoute attentivement link 'A' 65\nlink 'B' 66 : Ce n'est pas intéressant !\nlink 'C' 67 : Je préfère rester Moldu et quitter Poudlard...",
+        "textmobile" : "Le professeur Dumbledore va énoncer quelques points du règlement intérieur de Poudlard\nDroite Je l'écoute attentivement\nGaucheCe n'est pas intéressant !\nBasJe préfère rester Moldu et quitter Poudlard...",
+        "nextvideos" : { "A" : "004", "B" : "006", "C" : "100"},
+        "nextvideosmobile" : { "right" : "004", "down" : "100", "left" : "006" },
+        "type" : "multichoicebykeypressed"
+         }
+      },
+     {
+      "id":"004",
+      "onend": {
+        "text" : "\nlink 'A' 65 : Quel est la suite du règlement intérieur ?\nlink 'B' 66 : Bon, c'est pas intéressant ! Pourquoi est-on là ?\nlink 'C' 67 : Je préfère rester Moldu et quitter Poudlard...",
+        "textmobile" : "Droite Quel est la suite du règlement intérieur ?\nBasBon, c'est pas intéressant ! Pourquoi est-on là ?\nGaucheJe préfère rester Moldu et quitter Poudlard...",
+        "nextvideos" : { "A" : "005", "B" : "006", "C" : "100"} ,
+        "nextvideosmobile" : { "right" : "005", "down" : "006", "left" : "100" } ,
+        "type" : "multichoicebykeypressed"
+         }
+      },
+      {
+       "id":"005",
+       "onend": {
+         "text" : "\nlink 'A' 65 : Bon, pourquoi est-on là ?\nlink 'B' 66 : Je préfère rester Moldu et quitter Poudlard...",
+         "textmobile" : "Droite Bon, pourquoi est-on là ?\nBasJe préfère rester Moldu et quitter Poudlard...",
+         "nextvideos" : { "A" : "006", "B" : "100"} ,
+         "nextvideosmobile" : { "right" : "006", "down" : "100"} ,
+         "type" : "multichoicebykeypressed"
+          }
+       },
+       {
+        "id":"006",
+        "onend": {
+          "text" : "\nlink 'A' 65 : Attendre mon tour gentillement.\nlink 'B' 66 : Avoir super mal a sa cicatrice\nlink 'C' 67 : Faire un combat de regard avec le professeur Rogue !",
+          "textmobile" : "Droite Attendre mon tour gentillement.\nBasAvoir super mal a sa cicatrice\nGauche Faire un combat de regard avec le professeur Rogue !",
+          "nextvideos" : { "A" : "007", "B" : "008", "C" :"009"} ,
+          "nextvideosmobile" : { "right" : "007", "down" : "008", "left" : "009"} ,
+          "type" : "multichoicebykeypressed"
+           }
+        },
+         {
+          "id":"007",
+          "onend": {
+            "text" : "\nlink 'A' 65 : Avoir super mal a sa cicatrice\nlink 'B' 66 : Faire un combat de regard avec le professeur Rogue !\nlink 'C' 67 : Attendre son tour de passer !",
+            "textmobile" : "DroiteAvoir super mal a sa cicatrice\nBas Faire un combat de regard avec le professeur Rogue !\nGauche Attendre son tour de passer !",
+            "nextvideos" : { "A" : "008", "B" : "009", "C" :"010"} ,
+            "nextvideosmobile" : { "right" : "008", "down" : "009", "left" : "010"} ,
+            "type" : "multichoicebykeypressed"
+             }
+          },
+          {
+            "id":"008",
+           "onend": {
+             "text" : "\nlink 'A' 65 : Faire un combat de regard avec le professeur Rogue !\nlink 'B' 66 : Attendre son tour de passer !",
+             "textmobile" : "Droite Faire un combat de regard avec le professeur Rogue !\nGauche Attendre son tour de passer !",
+             "nextvideos" : { "A" : "009", "B" : "010", "_" : "058"} ,
+             "nextvideosmobile" : { "right" : "009", "left" : "010"} ,
+             "type" : "multichoicebykeypressed"
+              }
+           },
+           {
+             "id":"009",
+            "onend": {
+              "text" : "\nlink 'A' 65 : Aller à moi d'y passer !",
+              "textmobile" : "Droite Gauche Attendre son tour de passer !",
+              "nextvideos" : { "A" : "010", "_" : "010"} ,
+              "nextvideosmobile" : { "right" : "010"} ,
+              "type" : "multichoicebykeypressed"
+               }
+            },
+
+            {
+              "id":"010",
+              "onend": {
+                "text" : "\nlink 'B' 66 : Appuyez longuement sur link 'B' 66 pour avancer vers le choixpeau",
+                "textmobile" : "Tap Tapotez pour avancer vers le choixpeau",
+                "nextvideos" : { "B" : "011", "_" : "100"} ,
+                "type" : "multichoicebykeypressed"
+                 }
+             },
+          {
+            "id":"400",
+            "onstart": { "stopvideo" : "005" },
+            "onend": {
+             "text" : "C'est quoi ça?\nlink 'A' 65 : Je dois faire quoi Maintenant? Me remettre l'émetteur dans le nez?\nlink 'B' 66 : C'est quoi ce bordel? Je ne veux pas le savoir je m'en vais!\nlink 'C' 67 : Télévision, dis moi quoi faire!",
+             "textmobile" : "Haut Je dois faire quoi Maintenant ?\nJe vais me remettre l'émetteur dans le nez ! Droite \nGauche Je ne veux pas le savoir je m'en vais.",
+             "nextvideos" : { "A" : "007", "C" : "008", "_" : "056"} ,
+             "nextvideosmobile" : { "left" : "056", "right" : "007", "up" : "008"} ,
+             "type" : "multichoicebykeypressed"
+              }
+           },
+              {
+               "id":"107",
+               "onend": {
+                 "text" : "\nlink 'A' 65 : Ce n'est pas un rêve! Dis moi quoi faire...\nlink 'B' 66 : Réexplique moi ça je ne t'ai pas écouté!",
+                  "textmobile" : "Ce n'est pas un rêve! Dis moi quoi faire... Droite\nGauche Réexplique moi ça je ne t'ai pas écouté!",
+                 "nextvideos" : { "A" : "001", "B" : "000", "_" : "056"},
+                 "nextvideosmobile" : { "right" : "001", "left" : "000"} ,
+                 "type" : "multichoicebykeypressed"
+                  }
+               },
+               {
+                "id":"131",
+                "onend": {
+                  "text" : "Mince! Elle n'a rien compris...\nlink 'A' 65 : Je vais insulter son fils!\nlink 'B' 66 : Bon télévision, parles moi encore!",
+                  "textmobile" : "Mince! Elle n'a rien compris...\nJe vais insulter son fils! Droite\nGauche Bon télévision, parles moi encore!",
+                  "nextvideos" : { "A" : "125", "B" : "002", "_" : "057"},
+                  "nextvideosmobile" : { "right" : "125","left" : "002"} ,
+                  "type" : "multichoicebykeypressed"
+                   }
+                },
+                {
+                 "id":"125",
+                 "onend": {
+                   "text" : "\nIl ne réagit pas non plus... bon...\nlink 'A' 65 : Allez, télévision, racontes moi des trucs!",
+                   "textmobile" : "Il ne réagit pas non plus... bon...Droite\nGauche Allez, télévision, racontes moi encore des trucs!",
+                   "nextvideos" : { "A" : "003", "_" : "057"},
+                   "nextvideosmobile" : { "right" : "057","left" : "003"},
+                   "type" : "multichoicebykeypressed"
+                    }
+                 }
+  ],
+  "gameovers":{
+    "idmin" : 56,
+    "idmax" : 58,
+     "text" : "\nVous avez perdu !Pour rejouer la dernière séquence cliquer ici : <a href='#' class='btn btn-xs btn-default' style='text-decoration:none' onClick='restartOnLastCheckpoint(); return false;'><span class='glyphicon glyphicon-repeat'></span>&nbsp;Rejouer</a>\nOu appuyez sur 'ESPACE'.",
+    "textmobile" : "\nVous avez perdu !\nTap Pour rejouer toucher l'écran."
+     }
+
+}

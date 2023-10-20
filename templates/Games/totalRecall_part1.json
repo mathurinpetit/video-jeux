@@ -13,8 +13,8 @@
     {
      "id":"000",
      "onend": {
-       "text" : "À vous de jouer ! Décider de la suite du film !\nlink 'A' 65 : Si vous voulez en savoir plus, cliquez ici !\nlink 'B' 66 : Frappez vous la tête avec si vous pensez que c'est un rêve !\nlink 'C' 67 : Si cela ne vous interresse pas, cliquez ici !\n",
-       "textmobile" : "À vous de jouer ! Décider de la suite du film !\nGauche Glisser vers la gauche pour en savoir plus...\nHaut Glisser vers le haut pour vous frapper la tête si vous pensez que c'est un rêve !\nDroite Glisser vers la droite si cela vous paraît sans intérêts...",
+       "text" : "À vous de jouer ! Quelle est la suite ?\nlink 'A' 65 : Si vous voulez en savoir plus, cliquez ici !\nlink 'B' 66 : Frappez vous la tête avec si vous pensez que c'est un rêve !\nlink 'C' 67 : Si cela ne vous interresse pas, cliquez ici !\n",
+       "textmobile" : "À vous de jouer ! Quelle est la suite ?\nGauche Glisser vers la gauche pour en savoir plus...\nHaut Glisser vers le haut pour vous frapper la tête si vous pensez que c'est un rêve !\nDroite Glisser vers la droite si cela vous paraît sans intérêts...",
        "nextvideos" : { "A" : "001", "B" : "107", "C" : "056"} ,
        "nextvideosmobile" : { "left" : "001", "up" : "107", "right" : "056"} ,
        "type" : "multichoicebykeypressed"
