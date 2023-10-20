@@ -203,8 +203,18 @@ if(!ismobile){
       });
       if(!text){
         $("#footer").hide();
-        bottom: "-80px"
+        bottom: "-140px"
       }
+  }else{
+    $( "#footer" ).animate({
+      bottom: "0px"
+      }, footerDelay, function() {
+    });
+    if(!text){
+      $("#footer").hide();
+      bottom: "-110px"
+    }
+
   }
 }
 

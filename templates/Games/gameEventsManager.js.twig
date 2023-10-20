@@ -36,11 +36,15 @@ function skipGameOver(){
   videoElt.play();
 }
 
-// Gestion de l'assigmenent des< vidéo clefs par evennement
+// Gestion de l'assigmenent des vidéos clefs par evennements
 $(document).ready(function(){
      if(mobile){
          onWindowResizeMobile();
          initFullScreenButton();
+         if(!hasDisplayedFSButtonHelper){
+            displayFSButtonHelper();
+            hasDisplayedFSButtonHelper = true;
+         }
      }
     loadText("",0,mobile);
     refreshGame();
