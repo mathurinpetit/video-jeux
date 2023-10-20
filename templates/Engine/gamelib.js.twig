@@ -11,6 +11,7 @@ function onWindowResizeMobile(){
     }else {
         $(".turn-mobile").hide();
         $("#startGame").show();
+        $("#startButton").css("z-index","500");
         $(".buttonStartParent").addClass("positionLandscape").removeClass("positionPortrait");
         if($("#footer span.text").html()){
             $("#footer").show();
@@ -269,7 +270,7 @@ function initFullScreenButton(){
     var goFS = document.getElementById("goFSButton");
     goFS.addEventListener("click", function() {
         toggleFullscreen();
-
+        $("#startGame").click();
     }, false);
 }
 
