@@ -184,9 +184,24 @@ if(!ismobile){
       }
     }
   }else{
+    var matches = [];
+    if(matches = text.match(/Haut (.*?)<br\/>/ig)){
+      text = text.replaceAll(matches[0],"<div style='text-align:center;'>"+matches[0]+"</div>");
+    }
+    if(matches = text.match(/Gauche (.*?)<br\/>/ig)){
+      var match = matches[0];
+      match = match.replace('<br/>','');
+      text = text.replaceAll(matches[0],"<div class='col-xs-6'>"+match+"</div>");
+    }
+    if(matches = text.match(/Droite (.*?)<br\/>/ig)){
+      text = text.replaceAll(matches[0],"<div class='col-xs-6' style='text-align:right;'>"+matches[0]+"</div>");
+    }
+    if(matches = text.match(/Bas (.*?)<br\/>/ig)){
+      text = text.replaceAll(matches[0],"<div style='text-align:center;'>"+matches[0]+"</div>");
+    }
+    text = text.replaceAll('Haut',"&nbsp;<span class='glyphicon glyphicon-arrow-up' ></span>&nbsp;");
     text = text.replaceAll('Gauche',"&nbsp;<span class='glyphicon glyphicon-arrow-left' ></span>&nbsp;");
     text = text.replaceAll('Droite',"&nbsp;<span class='glyphicon glyphicon-arrow-right' ></span>&nbsp;");
-    text = text.replaceAll('Haut',"&nbsp;<span class='glyphicon glyphicon-arrow-up' ></span>&nbsp;");
     text = text.replaceAll('Bas',"&nbsp;<span class='glyphicon glyphicon-arrow-down' ></span>&nbsp;");
     text = text.replaceAll('Tap ',"&nbsp;<span class='glyphicon glyphicon-hand-down' ></span>&nbsp;&nbsp;");
 

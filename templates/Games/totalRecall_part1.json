@@ -13,10 +13,10 @@
     {
      "id":"000",
      "onend": {
-       "text" : "À vous de jouer ! Quelle est la suite ?\nlink 'A' 65 : Si vous voulez en savoir plus, cliquez ici !\nlink 'B' 66 : Frappez vous la tête avec si vous pensez que c'est un rêve !\nlink 'C' 67 : Si cela ne vous interresse pas, cliquez ici !\n",
-       "textmobile" : "À vous de jouer ! Quelle est la suite ?\nGauche Glisser vers la gauche pour en savoir plus...\nHaut Glisser vers le haut pour vous frapper la tête si vous pensez que c'est un rêve !\nDroite Glisser vers la droite si cela vous paraît sans intérêts...",
-       "nextvideos" : { "A" : "001", "B" : "107", "C" : "056"} ,
-       "nextvideosmobile" : { "left" : "001", "up" : "107", "right" : "056"} ,
+       "text" : "À vous de jouer ! Quelle est la suite ?\nlink 'A' 65 : Si vous voulez en savoir plus, cliquez ici !\nlink 'B' 66 : Frappez vous la tête avec si vous pensez que c'est un rêve !\nlink 'C' 67 : Si cela ne vous interresse pas, cliquez ici !\nlink 'D' 68 : Il faut créer la vidéo 1000, cliquez ici !\n",
+       "textmobile" : "À vous de jouer ! Quelle est la suite ?\nHaut Glisser vers le haut pour vous frapper la tête si vous pensez que c'est un rêve !\nGauche Glisser vers la gauche pour en savoir plus...\nDroite Glisser vers la droite si cela vous paraît sans intérêts...\nBas Glissez vers Bas pour créer la vidéo 1000...\n",
+       "nextvideos" : { "A" : "001", "B" : "107", "C" : "056", "D":"1000"} ,
+       "nextvideosmobile" : { "left" : "001", "up" : "107", "right" : "056", "down":"1000"} ,
        "type" : "multichoicebykeypressed"
         }
      },

@@ -26,7 +26,7 @@
 {% endif %}
 
 <div class="mobileHeadLeft" >
-    <button id="goFSButton" class="btn btn-default btn-xs" style="text-decoration:none; opacity:0.6; z-index:700; position: relative;" ><span class="goFSSpan glyphicon glyphicon-resize-full"></span><span class="goFSText">&nbsp;Plein Écran</span></button>
+    <button id="goFSButton" class="btn btn-default btn-lg" style="text-decoration:none; z-index:700; position: relative;" ><span class="goFSSpan glyphicon glyphicon-resize-full"></span><span class="goFSText">&nbsp;Mettre en plein écran</span></button>
     </button>
 </div>
 
@@ -53,8 +53,8 @@
 
 <div class="FSButtonHelperPanel" style="display:none;">
     <div style="margin: 0px; padding: 0px; position: fixed; left: 0px; top: 0px; width: 75%; height: 40px; z-index: 600; opacity: 0.8; background-color:#000;"></div>
-    <div style="margin: 0px; padding: 0px; position: fixed; right: 0px; top: 40px; width: 100%; height: 90%; z-index: 600; opacity: 0.8; background-color:#000;">
-        <p style="position: absolute; color: White; top: 0%; left: 75%;">
+    <div style="margin: 0px; padding: 0px; position: fixed; right: 0px; top: 80px; width: 100%; height: 90%; z-index: 600; opacity: 0.8; background-color:#000;">
+        <p style="position: absolute; color: White; top: 0%; left: 50%;">
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-arrow-up' ></span>&nbsp;<br/>
         Passer en mode plein écran ici pour mieux profiter des jeux.
         </p>
@@ -104,13 +104,12 @@
 {% if iphone %}
 <div id="iphone" style="margin: 0px; padding: 0px; position: fixed; right: 0px; top: 0px; width: 100%; height: 100%; z-index: 2000; background: rgba(0,0,0,.7); " >
     <div class="iphonePanel">
-      <button class="btn btn-lg btn-default" id="iphoneMask">
-          <span style="font-size:10px;">Attention !!!</span><br>
-          <span style="font-size:10px;">Les jeux de video-jeux.fr ne sont pas prévus</span><br>
+      <button class="btn btn-lg btn-default" id="iphoneMask" disabled="disabled" style="opacity:1.0">
+           <strong>Attention !!!</strong><br/>
+           <span style="font-size:10px;">Les jeux de video-jeux.fr ne sont pas prévus</span><br>
            <span style="font-size:10px;">pour fonctionner sur IPhone.</span><br>
-           <span style="font-size:10px;">Veuillez utiliser un autre navigateur</span><br>
-           <span style="font-size:10px;">pour profiter pleinement des jeux.</span><br>
-           <strong>Jouer quand même&nbsp;</strong>
+           <span style="font-size:10px;">Veuillez utiliser un autre appareil</span><br>
+           <span style="font-size:10px;">pour commencer l'aventure.</span><br>
       </button>
 
     </div>
