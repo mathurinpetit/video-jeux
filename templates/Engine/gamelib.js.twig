@@ -186,21 +186,22 @@ if(!ismobile){
   }else{
     var matches = [];
     if(matches = text.match(/Haut (.*?)<br\/>/ig)){
-      text = text.replaceAll(matches[0],"<div class='col-xs-offset-2 col-xs-8' style='text-align:center; border-color: white; border: solid 0.2em;'>"+matches[0]+"</div>");
+      text = text.replaceAll(matches[0],"<div class='col-xs-offset-1 col-xs-10' style='text-align:center; border-color: white; border: solid 0.2em; margin : 2px;'>"+matches[0]+"</div>");
     }
     if(matches = text.match(/Gauche (.*?)<br\/>/ig)){
       var match = matches[0];
       match = match.replace('<br/>','');
-      text = text.replaceAll(matches[0],"<div class='col-xs-6' style='border-color: white; border: solid 0.2em;'>"+match+"</div>&nbsp;");
+      text = text.replaceAll(matches[0],"<div class='col-xs-5' style='border-color: white; border: solid 0.2em; margin : 2px;'>"+match+"</div>&nbsp;");
     }
     if(matches = text.match(/Droite(.*?)<br\/>/ig)){
-      text = text.replaceAll(matches[0],"<div class='col-xs-6' style='border-color: white; border: solid 0.2em; text-align:right;'>"+matches[0]+"</div>");
-    }
-    if(matches = text.match(/Bas (.*?)<br\/>/ig)){
       var match = matches[0];
       match = match.replace('Droite','');
       match = match.replace('<br/>','');
-      text = text.replaceAll(matches[0],"<div class='col-xs-offset-2 col-xs-8' style='text-align:center; border-color: white; border: solid 0.2em;'>"+match+" Droite</div><br/>");
+      text = text.replaceAll(matches[0],"<div class='col-xs-5' style='border-color: white; border: solid 0.2em; text-align:right; margin : 2px;'>"+match+" Droite</div><br/>");
+    }
+    if(matches = text.match(/Bas (.*?)<br\/>/ig)){
+
+      text = text.replaceAll(matches[0],"<div class='col-xs-offset-1 col-xs-10' style='text-align:center; border-color: white; border: solid 0.2em; margin : 2px;'>"+matches[0]+" Droite</div><br/>");
     }
     text = text.replaceAll('Haut',"&nbsp;<span class='glyphicon glyphicon-arrow-up' ></span>&nbsp;");
     text = text.replaceAll('Gauche',"&nbsp;<span class='glyphicon glyphicon-arrow-left' ></span>&nbsp;");
