@@ -34,7 +34,7 @@
     <a href="{{ path("videogame") }}" class="btn btn-default btn-xs retour_accueil_btn" style="text-decoration:none; opacity:0.6; margin-bottom:5px;" rel="external"><span class="glyphicon glyphicon-home"></span></a><br/>
     {% if not urlgame %}
     <button data-toggle="modal" data-target="#sharePopup" class="popupPartage btn btn-xs btn-primary" style="padding-top:5px;" >
-            <object type="image/svg+xml" data="{{ asset('share.svg') }}" width="12" height="12" color="white"></object>
+            <object  style="pointer-events: none;"  type="image/svg+xml" data="{{ asset('share.svg') }}" width="12" height="12" color="white"></object>
     </button>
     {% endif %}
 </div>
@@ -62,7 +62,7 @@
 </div>
 
 
-<div class="modal fade" id="sharePopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade in" id="sharePopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -96,7 +96,7 @@
             </a>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger btn-xs">Fermer</button>
+        <button type="button" class="btn btn-danger btn-xs" data-dismiss="modal" aria-label="Close">Fermer</button>
       </div>
     </div>
   </div>
@@ -132,7 +132,7 @@
         <p style="margin: 0 10px 5px; bottom: 0" >
           <a id="playSequenceBtn" class="btn btn-xs btn-success" onclick="playSequenceBtn(); return false;" width="16" height="16" style="font-size: 10px;line-height: 2.2; height: 28px; font-weight:bold;padding-top:2px;margin-right:2px;">Lire&nbsp;<span class="glyphicon glyphicon-play"></span></a>
           <button data-toggle="modal" data-target="#sharePopup" class="popupPartage btn btn-xs btn-primary" style="font-size: 10px;line-height: 1.4; font-weight:bold;padding-top:5px;margin-right:5px;">
-                  <object type="image/svg+xml" data="{{ asset('share.svg') }}" width="16" height="16" color="white"></object>
+                  <object style="pointer-events: none;" type="image/svg+xml" data="{{ asset('share.svg') }}" width="16" height="16" color="white"></object>
           </button>
         </p>
 
