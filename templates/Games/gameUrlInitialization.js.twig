@@ -183,16 +183,6 @@ function initSelect2(){
       });
 
 }
-$(document).on('focus', '.select2', function(){
-  if ('virtualKeyboard' in navigator) {
-    $('.select2').each(function(){
-    //   hideKeyBoard($(this));
-    })
-    //navigator.virtualKeyboard.hide();
-  }else {
-    console.log('no virtualKeyboard API');
-  }
-});
 
 $('#select2').on('select2:select', function (e) {
   var data = e.params.data;

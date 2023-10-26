@@ -103,8 +103,16 @@ $('a.share').click(function(event){
 		facebook : { width : 600, height : 300 },
 		twitter  : { width : 600, height : 254 },
 		google   : { width : 515, height : 490 },
-		linkedin : { width : 600, height : 473 }
+		linkedin : { width : 600, height : 473 },
+    copylink : { width : 600, height : 473 }
 	};
+  if(network == "copylink"){
+    navigator.clipboard.writeText(href);
+    $('body').append("<span id='idCopy' style='position: absolute;z-index: 100000; height:100px;width:100%;font-size: 100px;color: black;left: 0; top:40%' >lien copié</span>");
+    $('#idCopy').fadeIn(100);
+    $('#idCopy').fadeOut(3000, function() { $(this).remove(); });
+    return false;
+  }
   if(network != "email"){
   	var popup = function(network){
   		var options = 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,';
@@ -114,4 +122,5 @@ $('a.share').click(function(event){
     return false;
   }
   $link.attr('href',href);
+
 });

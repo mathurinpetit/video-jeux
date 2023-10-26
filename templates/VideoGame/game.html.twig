@@ -67,18 +67,18 @@
       </a>
     </div>
     <br/>
-    <div  style="  position: absolute; bottom: 100px; left:30px;">
+    <div  style="  position: absolute; bottom: 100px; left:10px; margin:0">
       <center>
         <a target="_blank" title="Facebook" href="https://www.facebook.com/sharer.php?u=URLENCODED&t=TITLE" class="share facebook" data-network="facebook" rel="nofollow">
-          <img src="{{ asset('/images/facebook_icon.png') }}" alt="Facebook" />
-        </a>
+          <img src="{{ asset('/images/facebook_icon.png') }}" alt="Facebook" /></a>
         <a target="_blank" title="Twitter" href="https://twitter.com/share?url=URLENCODED&text=TITLE" class="share twitter" data-network="twitter" rel="nofollow" >
-          <img src="{{ asset('/images/twitter_icon.png') }}" alt="Twitter" />
-        </a>
+          <img src="{{ asset('/images/twitter_icon.png') }}" alt="Twitter" /></a>
         <a target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=URLENCODED&title=TITLE" class="share linkedin" data-network="linkedin" rel="nofollow">
-          <img src="{{ asset('/images/linkedin_icon.png') }}" alt="Linkedin" />
-        </a>
-        <a target="_blank" title="Envoyer par mail" href="mailto:?Subject=Laurent à un message! &amp;Body=Salut, je suis Laurent, j'ai un message pour toi : URLENCODED" class="share" data-network="email" rel="nofollow"><img src="{{ asset('/images/email_icon.png') }}" alt="email" /></a>
+          <img src="{{ asset('/images/linkedin_icon.png') }}" alt="Linkedin" /></a>
+          <a target="_blank" title="Envoyer par mail" href="mailto:?Subject=J'ai un message pour toi !&amp;Body=J'ai un message pour toi !" rel="nofollow">
+            <img src="{{ asset('/images/email_icon.png') }}" alt="email" /></a>
+          <a href="URLENCODED" class="share copylink" data-network="copylink"  data-tooltip-text="Click To Copy" data-tooltip-text-copied="✔ Copied">
+            <img src="{{ asset('/images/copy_icon.png') }}" alt="copy" /></a>
       </center>
     </div>
     {% endif %}

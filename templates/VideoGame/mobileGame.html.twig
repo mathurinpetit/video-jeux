@@ -88,11 +88,11 @@
             <a target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=URLENCODED&title=TITLE" class="share linkedin" data-network="linkedin" rel="nofollow">
               <img src="{{ asset('/images/linkedin_icon.png') }}" alt="Linkedin" />
             </a>
-            <a target="_blank" href="https://plus.google.com/share?url=URLENCODED" class="share google" data-network="google">
-              <img src="{{ asset('/images/gplus_icon.png') }}" alt="Google+" />
+            <a target="_blank" title="Envoyer par mail" href="mailto:?Subject=J'ai un message pour toi !&amp;Body=J'ai un message pour toi !" rel="nofollow">
+                <img src="{{ asset('/images/email_icon.png') }}" alt="email" />
             </a>
-            <a target="_blank" title="Envoyer par mail" href="mailto:?Subject=Regarde ça c'est cool !&amp;Body=regarde%20cet%20article%20c'est%20super !%20 https://tontonduweb.com/previews-warc/genieCivil/article1.html" rel="nofollow">
-              <img src="{{ asset('/images/email_icon.png') }}" alt="email" />
+            <a href="URLENCODED" class="share copylink" data-network="copylink"  data-tooltip-text="Click To Copy" data-tooltip-text-copied="✔ Copied">
+                <img src="{{ asset('/images/copy_icon.png') }}" alt="email" />
             </a>
       </div>
       <div class="modal-footer">
@@ -142,7 +142,7 @@
 
    <div id="footer" class="mobile {% if urlgame %}small-footer{% endif %}" >
        <div style="position: relative; left: 2%; max-width: 96%;">
-         <span class="text" style="font-size : 8pt;"></span>
+         <span class="text" style="font-size : 9pt;"></span>
      </div>
    </div>
 
