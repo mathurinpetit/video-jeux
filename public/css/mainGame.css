@@ -26,6 +26,7 @@ body {
 
 #footer.mobile {
   height:140px;
+  z-index: 450;
 }
 
 #dictionnaire {
