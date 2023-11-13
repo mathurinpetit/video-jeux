@@ -131,7 +131,7 @@
                "id":"019",
                "onend": {
                  "text" : "Dans quelle maison je suis ? \nlink 'A' 65 : Serpentard, évidemment !\nlink 'B' 66 : Poufsouffle, bien sûr !\nlink 'C' 67 : Gryffondor, c'est sûr ! \nlink 'D' 68 : Serdaigle voyons !\n",
-                 "textmobile" : "Dans quelle maison je suis ? \nHaut Serpentard, évidemment !\nGauche Poufsouffle, bien sûr !\nDroite 67 : Gryffondor, c'est sûr ! \nBas Serdaigle voyons !\n",
+                 "textmobile" : "Dans quelle maison je suis ? \nHaut Serpentard, évidemment !\nGauche Poufsouffle, bien sûr !\nDroite Gryffondor, c'est sûr ! \nBas Serdaigle voyons !\n",
                  "nextvideos" : { "A" : "022", "B" : "021","C" : "020", "D" : "023"} ,
                  "nextvideosmobile" : { "up" : "022", "left" : "021","right": "020", "down" : "023"} ,
                  "type" : "multichoicebykeypressed"
