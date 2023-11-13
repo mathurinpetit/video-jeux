@@ -6,28 +6,29 @@
                 "A" : {"keys" : [65,97] },
                 "B" : { "keys" : [66,98] },
                 "C" : { "keys" : [67,99] },
-                "D" : { "keys" : [68,100]}
+                "D" : { "keys" : [68,100]},
+                "ESPACE": { "keys" : [32,100]}
               },
               "scenario":[
               {
                 "id":"010",
                 "onend": {
-                  "text" : "\nMaintenez link 'A' 65 pour faire atterrir le vaisseau sur Mars...",
+                  "text" : "\nMaintenez 'ESPACE' pour faire atterrir le vaisseau sur Mars...\n",
                   "textmobile" : "\nTap Tapotez pour faire atterrir le vaisseau sur Mars...",
-                  "nextvideos" : { "A" : "011", "_" : "060"} ,
+                  "nextvideos" : { "ESPACE" : "011", "_" : "060"} ,
                   "videomobiletoplay" :  "011" ,
                   "nextvideomobile" : "012",
                   "delay" : 500,
                   "type" : "playbykey",
-                  "textduring" : "\nMaintenez link 'A' 65 pour faire atterrir le vaisseau sur Mars..."
+                  "textduring" : "\nMaintenez 'ESPACE' pour faire atterrir le vaisseau sur Mars..."
                    }
                },
                {
                  "id":"011",
                  "onend": {
-                  "text" : "\nMaintenez link 'A' 65 pour faire atterrir le vaisseau sur Mars...",
+                  "text" : "\nMaintenez 'ESPACE' pour faire atterrir le vaisseau sur Mars...",
                   "textmobile" : "\nTap Tapotez pour faire atterrir le vaisseau sur Mars...",
-                  "nextvideos" : { "A" : "012", "_" : "061"} ,
+                  "nextvideos" : { "ESPACE" : "012", "_" : "061"} ,
                   "nextvideomobile" : "012",
                   "type" : "multichoicebykeypressed"
                    }

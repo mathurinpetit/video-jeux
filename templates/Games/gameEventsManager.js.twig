@@ -26,6 +26,7 @@ function unbindAllEvents(){
 
 function restartOnLastCheckpoint(){
   changeVideo(pathGame,lastVideoPlayed["val"]);
+  console.log(pathGame,lastVideoPlayed["val"]);
   loadText("",0,mobile);
   refreshGame();
 }
@@ -179,6 +180,16 @@ function refreshGame(){
         var goodKeys = {};
         var gameOver = "";
         var found = false;
+        
+        var gameOverMin = null;
+        var gameOverMax = null;
+        var hasgameover = false;
+        if(game_json.hasOwnProperty("gameovers")){
+            hasgameover = true;
+            gameOverMin = game_json.gameovers.idmin;
+            gameOverMax = game_json.gameovers.idmax;
+        }
+
         if(debug_script){ console.log("keypressed "+code); }
         $.each(nextVideos, function(char, nextvideo) {
           if(char!=='_'){
@@ -192,7 +203,9 @@ function refreshGame(){
                     return false;
                   }else {
                     changeVideo(pathGame,nextId,delay);
-                    lastVideoPlayed["val"] = ""+nextVideos[char];
+                    if(hasgameover && (parseInt(nextId) < gameOverMin || parseInt(nextId) > gameOverMax)){
+                      lastVideoPlayed["val"] = ""+nextVideos[char];
+                    }
                     if(cookie){
                       createCookie("{{game.shortName}}",lastVideoPlayed["val"],7);
                     }

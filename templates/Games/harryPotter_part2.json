@@ -1,0 +1,230 @@
+{
+ "globaldelay": "600",
+ "debugstart" : "001",
+ "cookie" : true,
+ "gamekeys" : {
+                "A" : {"keys" : [65,97] },
+                "B" : { "keys" : [66,98] },
+                "C" : { "keys" : [67,99] },
+                "D" : { "keys" : [68,100]},
+                "ESPACE": { "keys" : [32,100]}
+              },
+"scenario":[
+    {
+     "id":"001",
+     "onend": {
+      "text" : "\nFaire des mouvements de souris de gauche à droite pour avancer dans la Grande salle de Poudlard.",
+      "textmobile" : "\nTap Tapoter pour avancer dans la Grande salle de Poudlard.",
+      "nextvideos" : { "move" : "002", "aftermove" : "003"} ,
+      "videomobiletoplay" :  "002",
+      "nextvideomobile" :  "003",
+      "type" : "playbymouse"
+       }
+     },
+     {
+       "id": "002"
+     },
+     {
+      "id":"003",
+      "onend": {
+        "text" : "Le professeur Dumbledore va énoncer quelques points du règlement intérieur de Poudlard\nlink 'A' 65 : Je l'écoute attentivement !\nlink 'B' 66 : Dumbledore est âgé, je suis sûr qu'il va déraper !\nlink 'C' 67 : La barbe la réglement intérieur !\nlink 'D' 68 : Je préfère quitter Poudlard et rester Moldu...\n",
+        "textmobile" : "Le professeur Dumbledore va énoncer quelques points du règlement intérieur de Poudlard\nGlissez vers Haut : Je l'écoute attentivement !\nGlissez vers Gauche : Dumbledore est âgé, je suis sûr qu'il va déraper !\nLa barbe la réglement intérieur : glissez vers Droite\nBasJe préfère quitter Poudlard et rester Moldu...",
+        "nextvideos" : { "A" : "004", "B" : "004", "C" : "006", "D" :"050"},
+        "nextvideosmobile" : { "up" : "004","left" : "004", "down" : "050", "right" : "006" },
+        "type" : "multichoicebykeypressed"
+         }
+      },
+     {
+      "id":"004",
+      "onend": {
+        "text" : "Hein ? Il a dit quoi sur M. Rusard ?\nlink 'A' 65 : Quelle est la suite du règlement intérieur ?\nlink 'B' 66 : Bon, c'est pas intéressant ! Pourquoi est-on là ?\nlink 'C' 67 : Je vais défiez le professeur Rogue avec mon regard...\nlink 'D' 68 : Je préfère rester Moldu et quitter Poudlard...\n",
+        "textmobile" : "Hein ? Il a dit quoi sur M. Rusard ?\nHautBon, c'est pas intéressant ! Pourquoi est-on là ?\nGauche Quelle est la suite du règlement intérieur ?\nJe préfère rester Moldu et quitter Poudlard Droite\nBas Je vais défiez le professeur Rogue avec mon regard...",
+        "nextvideos" : { "A" : "005", "B" : "006", "C" : "009", "D" : "050"} ,
+        "nextvideosmobile" : { "left" : "005", "up" : "006", "right" : "050","down":"009" } ,
+        "type" : "multichoicebykeypressed"
+         }
+      },
+      {
+       "id":"005",
+       "onend": {
+         "text" : "Dans la forêt ? Mais... \nlink 'A' 65 : bon, pourquoi est-on là alors ?\nlink 'B' 66 : Je préfère définitivement rester Moldu\n",
+         "textmobile" : "Dans la forêt ? Mais... \nGauche bon, pourquoi est-on là ?\nJe préfère définitivement rester Moldu : Droite",
+         "nextvideos" : { "A" : "006", "B" : "050"} ,
+         "nextvideosmobile" : { "left" : "006", "right" : "050"} ,
+         "type" : "multichoicebykeypressed"
+          }
+       },
+       {
+        "id":"006",
+        "onend": {
+          "text" : "Ca rique d'être long cette affaire...\nlink 'A' 65 : Attendre mon tour gentillement\nlink 'B' 66 : Regarder Rogue...\nlink 'C' 67 : Avoir super mal a sa cicatrice\nlink 'D' 68 : Faire un combat de regard avec le professeur Rogue ! \n",
+          "textmobile" : "Ca rique d'être long cette affaire...\nHaut Attendre mon tour gentillement\nGauche Faire un combat de regard avec le professeur Rogue !\nRegarder Rogue... Droite\nBasAvoir super mal a sa cicatrice",
+          "nextvideos" : { "A" : "007", "B" : "007", "C" : "008", "D" :"009"} ,
+          "nextvideosmobile" : { "up" : "007", "right" : "007","down" : "008", "left" : "009"} ,
+          "type" : "multichoicebykeypressed"
+           }
+        },
+         {
+          "id":"007",
+          "onend": {
+            "text" : "Aïe ! Mais qu'est-ce qui s'est passé ?\nlink 'A' 65 : Avoir beaucoup plus mal à sa cicatrice\nlink 'B' 66 : Défiez Rogue avec mon regard !\nlink 'C' 67 : Ne plus regarder Rogue et attendre mon tour !\n",
+            "textmobile" : "Aïe ! Mais qu'est-ce qui s'est passé ?\nHaut Attendre mon tour de passer\nGauche Avoir super mal a sa cicatrice\nFaire un combat de regard avec le professeur Rogue Droite",
+            "nextvideos" : { "A" : "008", "B" : "009", "C" :"017"} ,
+            "nextvideosmobile" : { "left" : "008", "right" : "009", "up" : "017"} ,
+            "type" : "multichoicebykeypressed"
+             }
+          },
+          {
+           "id":"008",
+           "onend": {
+             "text" : "Ca c'est à cause du professeur Rogue !!!\nlink 'A' 65 : Montrer à Rogue que je ne me laisserais pas faire !\nlink 'B' 66 : Répondre à Ron que ça va !\nlink 'C' 67 : Ca va être mon tour je crois !\n",
+             "textmobile" : "Ca c'est à cause du professeur Rogue !!!\nGauche Montrer à Rogue que je ne me laisserais pas faire !\nCa va être mon tour je crois ! Droite",
+             "nextvideos" : { "A" : "009", "B": "010", "C" : "017"} ,
+             "nextvideosmobile" : { "up" : "010", "right" : "009", "left" : "017"} ,
+             "type" : "multichoicebykeypressed"
+              }
+           },
+           {
+             "id":"009",
+            "onend": {
+              "text" : "Allez, ça suffit Rogue !\nlink 'A' 65 : Ho... C'est mon tour !\n",
+              "textmobile" : "Allez, ça suffit Rogue !\nGauche Ho... C'est mon tour !",
+              "nextvideos" : { "A" : "017", "_" : "017"} ,
+              "nextvideosmobile" : { "left" : "017"} ,
+              "type" : "multichoicebykeypressed"
+               }
+            },
+            {
+              "id":"010",
+             "onend": {
+               "text" : "Ce prof est vraiment bizarre !\nlink 'A' 65 : Je vais le défier du regard !\nlink 'B' 66 : Ha non ça y est... C'est mon tour !\n",
+               "textmobile" : "Ce prof est vraiment bizarre !\nGauche Je vais le défier du regard !\nHa non... C'est mon tour Droite ",
+               "nextvideos" : { "A" : "009", "B" : "017"} ,
+               "nextvideosmobile" : { "left" : "009", "right" : "017"} ,
+               "type" : "multichoicebykeypressed"
+                }
+             },
+            {
+              "id":"017",
+              "onend": {
+                "text" : "Enfin ! C'est mon tour !\nAppuyez longuement sur 'ESPACE' pour avancer vers le choixpeau\n",
+                "textmobile" : "Tap Tapotez pour avancer vers le choixpeau",
+                "nextvideos" : { "ESPACE" : "018"} ,
+                "videomobiletoplay" : "017" ,
+                "nextvideomobile" : "018",
+                "delay" : 600,
+                "type" : "playbykey",
+                "textduring" : "\nAppuyez longuement sur 'ESPACE' pour avancer vers le choixpeau\n"
+                 }
+             },
+             {
+              "id":"018",
+              "onend": {
+                "text" : "Enfin ! C'est mon tour !\n Appuyez longuement sur 'ESPACE' pour avancer vers le choixpeau\n",
+                "textmobile" : "Tap Tapotez pour avancer vers le choixpeau",
+                "nextvideos" : { "ESPACE" : "025"} ,
+                "type" : "multichoicebykeypressed"
+                 }
+              },
+
+              {
+               "id":"019",
+               "onend": {
+                 "text" : "Dans quelle maison je suis ? \nlink 'A' 65 : Serpentard, évidemment !\nlink 'B' 66 : Poufsouffle, bien sûr !\nlink 'C' 67 : Gryffondor, c'est sûr ! \nlink 'D' 68 : Serdaigle voyons !\n",
+                 "textmobile" : "Dans quelle maison je suis ? \nHaut Serpentard, évidemment !\nGauche Poufsouffle, bien sûr !\nDroite 67 : Gryffondor, c'est sûr ! \nBas Serdaigle voyons !\n",
+                 "nextvideos" : { "A" : "022", "B" : "021","C" : "020", "D" : "023"} ,
+                 "nextvideosmobile" : { "up" : "022", "left" : "021","right": "020", "down" : "023"} ,
+                 "type" : "multichoicebykeypressed"
+                  }
+               },
+               {
+                "id":"020",
+                "onend": {
+                  "text" : "Bravo ! Vous êtes un Gryffondor ! \n \n Faites des mouvements de souris de gauche à droite pour vous faire féliciter.&nbsp;<a class='btn btn-xs btn-success' onClick=' window.location = window.location.origin; return false;'><span class='glyphicon glyphicon-home'></span>&nbsp;Retour</a>",
+                  "textmobile" : "\nTap Tapoter pour vous faire féliciter.",
+                  "nextvideos" : { "move" : "100", "aftermove" : "020"} ,
+                  "videomobiletoplay" :  "100",
+                  "nextvideomobile" :  "100",
+                  "type" : "playbymouse"
+                  }
+                },
+
+                {
+                 "id":"021",
+                 "onend": {
+                   "text" : "Bravo ! Vous êtes un Poufsouffle ! \n \n Faites des mouvements de souris de gauche à droite pour vous faire féliciter.&nbsp;<a class='btn btn-xs btn-success' onClick=' window.location = window.location.origin; return false;'><span class='glyphicon glyphicon-home'></span>&nbsp;Retour</a>",
+                   "textmobile" : "\nTap Tapoter pour vous faire féliciter.",
+                   "nextvideos" : { "move" : "100", "aftermove" : "021"} ,
+                   "videomobiletoplay" :  "100",
+                   "nextvideomobile" :  "100",
+                   "type" : "playbymouse"
+                   }
+                 },
+
+                 {
+                  "id":"022",
+                  "onend": {
+                    "text" : "Bravo ! Vous êtes un Serpentard ! \n \n Faites des mouvements de souris de gauche à droite pour vous faire féliciter.&nbsp;<a class='btn btn-xs btn-success' onClick=' window.location = window.location.origin; return false;'><span class='glyphicon glyphicon-home'></span>&nbsp;Retour</a>",
+                    "textmobile" : "\nTap Tapoter pour vous faire féliciter.",
+                    "nextvideos" : { "move" : "100", "aftermove" : "022"} ,
+                    "videomobiletoplay" :  "100",
+                    "nextvideomobile" :  "100",
+                    "type" : "playbymouse"
+                    }
+                  },
+
+                  {
+                   "id":"023",
+                   "onend": {
+                     "text" : "Bravo ! Vous êtes un Serdaigle ! \n \n Faites des mouvements de souris de gauche à droite pour vous faire féliciter.&nbsp;<a class='btn btn-xs btn-success' onClick=' window.location = window.location.origin; return false;'><span class='glyphicon glyphicon-home'></span>&nbsp;Retour</a>",
+                     "textmobile" : "\nTap Tapoter pour vous faire féliciter.",
+                     "nextvideos" : { "move" : "100", "aftermove" : "023"} ,
+                     "videomobiletoplay" :  "100",
+                     "nextvideomobile" :  "100",
+                     "type" : "playbymouse"
+                     }
+                   },
+
+
+              {
+               "id":"025",
+               "onend": {
+                 "text" : "Bon c'est mon moment ! Un peu stressant quand même !\nlink 'A' 65 : Je veux pas savoir, je retourne à ma table !\nlink 'B' 66 : La magie c'est pas pour moi, je veux redevenir Moldu !\nlink 'C' 67 : Allez dis moi quelle maison je suis ! \nlink 'D' 68 : Je me dandine sur mon siège de nervosité...\n",
+                 "textmobile" : "Bon c'est mon moment ! Un peu stressant quand même !\nHaut La magie c'est pas pour moi, je veux redevenir Moldu !\nGauche Je veux pas savoir, je retourne à ma table !\nAllez dis moi quelle maison je suis Droite\nBas Je me dandine sur mon siège de nervosité...",
+                 "nextvideos" : { "A" : "026", "B" : "050","C" : "019", "D" : "030"} ,
+                 "nextvideosmobile" : { "up" : "050", "left" : "026","right": "019", "down" : "030  "} ,
+                 "type" : "multichoicebykeypressed"
+                  }
+               },
+               {
+                "id":"026",
+                "onend": {
+                  "text" : "Bon prenons notre courage à deux mains, on y retourne !\nAppuyez longuement sur 'ESPACE' pour avancer vers le choixpeau\n",
+                  "textmobile" : "Tap Tapotez pour avancer vers le choixpeau",
+                  "nextvideos" : { "ESPACE" : "018"} ,
+                  "videomobiletoplay" : "017" ,
+                  "nextvideomobile" : "018",
+                  "delay" : 600,
+                  "type" : "playbykey",
+                  "textduring" : "\nAppuyez longuement sur 'ESPACE' pour avancer vers le choixpeau\n"
+                   }
+               },
+              {
+               "id":"030",
+               "onend": {
+                 "text" : "Bon allez il serait temps de savoir !\nlink 'A' 65 : Allez dis moi quelle maison je suis ! \nlink 'B' 66 : Je veux pas savoir, je retourne à ma table !\nlink 'C' 67 : La magie c'est pas pour moi, je veux redevenir Moldu !\nlink 'D' 68 : Je me dandine sur mon siège de nervosité...\n",
+                 "textmobile" : "Bon c'est mon moment ! Un peu stressant quand même !\nHaut La magie c'est pas pour moi, je veux redevenir Moldu !\nGauche Allez dis moi quelle maison je suis !\nJe veux pas savoir, je retourne à ma table Droite\nBas Je me dandine sur mon siège de nervosité...",
+                 "nextvideos" : { "B" : "026", "C" : "050","A" : "019", "D" : "030"} ,
+                 "nextvideosmobile" : { "up" : "050", "right" : "026","left": "019", "down" : "030  "} ,
+                 "type" : "multichoicebykeypressed"
+                  }
+               }
+             ],
+  "gameovers":{
+    "idmin" : 50,
+    "idmax" : 52,
+     "text" : "\nVous êtes Moldu, l'histoire se finit là ! Pour rejouer la dernière séquence cliquer ici : <a href='#' class='btn btn-xs btn-default' style='text-decoration:none' onClick='restartOnLastCheckpoint(); return false;'><span class='glyphicon glyphicon-repeat'></span>&nbsp;Rejouer</a>\nOu appuyez sur 'ESPACE' ",
+    "textmobile" : "\nVous êtes Moldu, l'histoire se finit là !\nTap Pour rejouer toucher l'écran"
+     }
+
+}

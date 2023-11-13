@@ -13,28 +13,28 @@
     {
      "id":"000",
      "onend": {
-       "text" : "À vous de jouer ! Quelle est la suite ?\nlink 'A' 65 : Si vous voulez en savoir plus, cliquez ici !\nlink 'B' 66 : Frappez vous la tête avec si vous pensez que c'est un rêve !\nlink 'C' 67 : Si cela ne vous interresse pas, cliquez ici !\nlink 'D' 68 : Il faut créer la vidéo 1000, cliquez ici !\n",
-       "textmobile" : "À vous de jouer ! Quelle est la suite ?\nHaut Glisser vers le haut pour vous frapper la tête si vous pensez que c'est un rêve !\nGauche Glisser vers la gauche pour en savoir plus...\nDroite Si cela vous paraît sans intérêt, vers \nBas Glissez vers Bas pour créer la vidéo 1000...\n",
-       "nextvideos" : { "A" : "001", "B" : "107", "C" : "056", "D":"1000"} ,
-       "nextvideosmobile" : { "left" : "001", "up" : "107", "right" : "056", "down":"1000"} ,
+       "text" : "À vous de jouer ! Quelle est la suite ?\nlink 'A' 65 : Si vous voulez en savoir plus, cliquez ici !\nlink 'B' 66 : Frappez vous la tête avec si vous pensez que c'est un rêve !\nlink 'C' 67 : Si cela ne vous interresse pas, cliquez ici !\nlink 'D' 68 : Cliquez ici pour vous mettre nu et disparaître !\n",
+       "textmobile" : "À vous de jouer ! Quelle est la suite ?\nHaut Glisser vers le haut pour vous frapper la tête si vous pensez que c'est un rêve !\nGauche Glisser vers la gauche pour en savoir plus...\nDroite Si cela vous paraît sans intérêt, vers Droite\nBas Glissez vers Bas pour vous mettre nu et disparaître...\n",
+       "nextvideos" : { "A" : "001", "B" : "107", "C" : "056", "D":"101"} ,
+       "nextvideosmobile" : { "left" : "001", "up" : "107", "right" : "056", "down":"101"} ,
        "type" : "multichoicebykeypressed"
         }
      },
      {
        "id":"001",
       "onend": {
-        "text" : "link 'A' 65 : Sornettes! Je préfére séduire une blonde avec mes compétences en informatique!\nlink 'B' 66 : Tes histoires ne m'intéressent pas...\nlink 'C' 67 : Je veux en savoir plus... Continues!\n",
-        "textmobile" : "Haut Je préfère draguer une blonde avec mon savoir!\nCela ne m'interresse pas Droite\nGauche Je veux en savoir plus",
-        "nextvideos" : {"A" : "131", "C" : "002", "_" : "057"} ,
-        "nextvideosmobile" : { "left" : "002", "right" : "057","up" : "131"} ,
+        "text" : "Comment ça je suis toi ?\nlink 'A' 65 : Sornettes! Je préfére séduire une blonde avec mes compétences en informatique!\nlink 'B' 66 : Tes histoires ne m'intéressent pas...\nlink 'C' 67 : Je veux en savoir plus... Continues!\nlink 'D' 68 : N'importe quoi! Je préfère faire la morale à un enfant!\n",
+        "textmobile" : "Comment ça je suis toi ?\nHaut Je préfère draguer une blonde avec mon savoir!\nGauche Je veux en savoir plus\nCela ne m'interresse pas Droite\nBas Je préfère faire la morale à un enfant\n",
+        "nextvideos" : {"A" : "131", "B" : "057" , "C" : "002", "D" : "103"} ,
+        "nextvideosmobile" : {"up" : "131", "right" : "057", "left" : "002", "down" : "103"} ,
         "type" : "multichoicebykeypressed"
          }
       },
       {
         "id":"002",
        "onend": {
-         "text" : "link 'A' 65 : Qu'est ce que je dois faire ?\nlink 'B' 66 : Je ne veux pas 'baiser la gueule' à Cohagen, je ne le connais même pas\n",
-         "textmobile" : "Qu'est ce que je dois faire ? Droite\nGauche Je ne veux pas 'baiser la gueule' à Cohagen",
+         "text" : "Mais qu'est ce que ça veut dire ? C'est qui Cohagen ?\nlink 'A' 65 : Qu'est ce que je dois faire ?\nlink 'B' 66 : Je ne veux pas 'baiser la gueule' à Cohagen, je ne le connais même pas\n",
+         "textmobile" : "Mais qu'est ce que ça veut dire ? C'est qui Cohagen ?\nQu'est ce que je dois faire ? Droite\nGauche Je ne veux pas 'baiser la gueule' à Cohagen",
          "nextvideos" : { "A" : "003", "_" : "058"} ,
          "nextvideosmobile" : { "right" : "003", "left" : "058"} ,
          "type" : "multichoicebykeypressed"
@@ -61,13 +61,13 @@
            "nextvideomobile" : "006",
            "delay" : 600,
            "type" : "playbykey",
-           "textduring" : "\nAppuyez longuement sur la touche 'ESPACE' pour sortir l'émetteur de votre nez\n"
+           "textduring" : "\nMaintenez la touche 'ESPACE' pour sortir l'émetteur de votre nez\n"
             }
          },
          {
           "id":"005",
           "onend": {
-            "text" : "\nAppuyez longuement sur la touche 'ESPACE' pour sortir l'émetteur de votre nez\n",
+            "text" : "\nMaintenez la touche 'ESPACE' pour sortir l'émetteur de votre nez\n",
             "textmobile" : "Tap Tapotez pour sortir l'émetteur du nez",
             "nextvideos" : { "ESPACE" : "006"} ,
             "type" : "multichoicebykeypressed"
@@ -118,10 +118,70 @@
                  }
               },
               {
+                 "id":"100",
+                 "onend": {
+                   "text" : "Et maintenant ?\nlink 'A' 65 : Télévision, dis moi la suite !\nlink 'B' 66 : Je vais faire la morale à un enfant !\nlink 'C' 67 : Je vais soulever un enfant pour lui faire peur !\n",
+                    "textmobile" : "Et maintenant ?\nGauche Télévision, dis moi la suite !\nFaire la morale à un enfant Droite\nBas Menacer un enfant !",
+                   "nextvideos" : { "A" : "001", "B" : "103", "C" : "104"},
+                   "nextvideosmobile" : { "left" : "001", "right":"103", "down":"104"} ,
+                   "type" : "multichoicebykeypressed"
+                    }
+              },
+              {
+               "id":"101",
+               "onend": {
+                 "text" : "Et maintenant ?\nlink 'A' 65 : Je veux réapparaître pour savoir la suite ! \nlink 'B' 66 : Télévision, dis moi la suite !\nlink 'C' 67 : Je vais faire la morale à un enfant !\nlink 'D' 68 : Je vais soulever un enfant pour lui faire peur !\n",
+                  "textmobile" : "Et maintenant ?\nHaut Réapparaître pour savoir la suite !\nGauche Télévision, dis moi la suite !\nFaire la morale à un enfant Droite\nBas Menacer un enfant !",
+                 "nextvideos" : { "A" : "100", "B" : "001", "C" : "103", "D" : "104"},
+                 "nextvideosmobile" : { "up" : "100", "left" : "001", "right":"103", "down":"104"} ,
+                 "type" : "multichoicebykeypressed"
+                  }
+               },
+               {
+                "id":"103",
+                "onend": {
+                  "text" : "Haaa... ces humains...\nlink 'A' 65 : Bon, télévision, dis moi la suite...\nlink 'B' 66 : L'enfant ne m'a pas écouté, je vais le menacer !\nlink 'C' 67 : Je vais danser pour amuser l'enfant !\nlink 'D' 68 : Je vais l'insulter !\n",
+                   "textmobile" : "Haaa... ces humains...\nHaut Bon, télévision, dis moi la suite... \nGauche L'enfant ne m'a pas écouté, je vais le menacer !\nJe vais danser pour détendre l'atmosphère Droite\nBas Je vais insulter l'enfant.",
+                  "nextvideos" : { "A" : "002", "B" : "104", "C" : "105", "D" : "125"},
+                  "nextvideosmobile" : { "up" : "002", "left" : "104", "right" : "105", "down" : "125"} ,
+                  "type" : "multichoicebykeypressed"
+                   }
+                },
+                {
+                 "id":"104",
+                 "onend": {
+                   "text" : "Zut il appelle à l'aide...\nlink 'A' 65 : Jeter l'enfant par terre...\nlink 'B' 66 : Faire une danse pour le distraire !\nlink 'C' 67 : Continuer à regarder la télévision\n",
+                   "textmobile" : "Zut il appelle à l'aide...\nHaut Retourner voir la Télévision\nGauche Jeter l'enfant par terre...\nFaire une danse pour le distraire Droite",
+                   "nextvideos" : { "A" : "106", "B" : "105", "C" : "003"},
+                   "nextvideosmobile" : {"up" :"003", "left" : "106", "right" : "105"} ,
+                   "type" : "multichoicebykeypressed"
+                    }
+                 },
+                 {
+                  "id":"105",
+                  "onend": {
+                    "text" : "Pas mal cette danse !\nlink 'A' 65 : Télévision, dis m'en plus...\nlink 'B' 66 : Danser encore !\n",
+                    "textmobile" : "Pas mal cette danse !\nGauche Télévision, dis m'en plus...\nDanser encore Droite",
+                    "nextvideos" : { "A" : "003", "B" : "105"},
+                    "nextvideosmobile" : {"left" : "003", "right" : "105"} ,
+                    "type" : "multichoicebykeypressed"
+                     }
+                  },
+                 {
+                  "id":"106",
+                  "onend": {
+                    "text" : "Oups...\nlink 'A' 65 : Télévision, dis m'en plus...\nlink 'B' 66 : Faire une danse pour le consoler !\n",
+                    "textmobile" : "Oups...\nGauche Télévision, dis m'en plus...\nFaire une danse pour le consoler l'enfant Droite",
+                    "nextvideos" : { "A" : "003", "B" : "105"},
+                    "nextvideosmobile" : {"left" : "003", "right" : "105"} ,
+                    "type" : "multichoicebykeypressed"
+                     }
+                  },
+              {
                "id":"107",
                "onend": {
-                 "text" : "\nlink 'A' 65 : Ce n'est pas un rêve! Dis moi quoi faire...\nlink 'B' 66 : Réexplique moi ça je ne t'ai pas écouté !\n",
-                  "textmobile" : "Ce n'est pas un rêve! Dis moi quoi faire... Droite\nGauche Réexplique moi ça je ne t'ai pas écouté!",
+                 "text" : "Bon ça suffit !\nlink 'A' 65 : Ce n'est pas un rêve! Dis moi quoi faire...\nlink 'B' 66 : Réexplique moi ça je ne t'ai pas écouté !\n",
+                  "textmobile" : "Ce n'est pas un rêve! Dis moi quoi faire... Droite\nGauche Réexplique moi ça je ne t'ai pas écouté!\n",
                  "nextvideos" : { "A" : "001", "B" : "000", "_" : "056"},
                  "nextvideosmobile" : { "right" : "001", "left" : "000"} ,
                  "type" : "multichoicebykeypressed"
@@ -130,18 +190,18 @@
                {
                 "id":"131",
                 "onend": {
-                  "text" : "Mince! Elle n'a rien compris...\nlink 'A' 65 : Je vais insulter son fils!\nlink 'B' 66 : Bon télévision, parles moi encore!\n",
-                  "textmobile" : "Mince! Elle n'a rien compris...\nJe vais insulter son fils! Droite\nGauche Bon télévision, parles moi encore!",
-                  "nextvideos" : { "A" : "125", "B" : "002", "_" : "057"},
-                  "nextvideosmobile" : { "right" : "125","left" : "002"} ,
+                  "text" : "Mince! Elle n'a rien compris...\nlink 'A' 65 : Je vais menacer son fils physiquement!\nlink 'B' 66 : Je vais insulter son fils!\nlink 'C' 67 : Bon télévision, parles moi encore!\n",
+                  "textmobile" : "Mince! Elle n'a rien compris...\nHaut Je vais menacer physiquement son fils !\nGauche Bon télévision, parles moi encore!\nJe vais insulter son fils! Droite",
+                  "nextvideos" : { "A" : "104", "B": "125", "C" : "002", "_" : "057"},
+                  "nextvideosmobile" : { "up" : "104", "right" : "125","left" : "002"} ,
                   "type" : "multichoicebykeypressed"
                    }
                 },
                 {
                  "id":"125",
                  "onend": {
-                   "text" : "\nIl ne réagit pas non plus... bon...\nlink 'A' 65 : Allez, télévision, racontes moi des trucs!\n",
-                   "textmobile" : "Il ne réagit pas non plus... bon...Droite\nGauche Allez, télévision, racontes moi encore des trucs!",
+                   "text" : "\nIl ne réagit pas... bon...\nlink 'A' 65 : Allez, télévision, racontes moi des trucs!\n",
+                   "textmobile" : "Il ne réagit pas... bon...Droite\nGauche Allez, télévision, racontes moi encore des trucs!",
                    "nextvideos" : { "A" : "003", "_" : "057"},
                    "nextvideosmobile" : { "right" : "057","left" : "003"},
                    "type" : "multichoicebykeypressed"
@@ -151,7 +211,7 @@
   "gameovers":{
     "idmin" : 56,
     "idmax" : 58,
-     "text" : "\nVous avez perdu !Pour rejouer la dernière séquence cliquer ici : <a href='#' class='btn btn-lg btn-default' style='text-decoration:none' onClick='restartOnLastCheckpoint(); return false;'><span class='glyphicon glyphicon-repeat'></span>&nbsp;Rejouer</a>\nOu appuyez sur 'ESPACE'.",
+     "text" : "\nVous avez perdu ! Pour rejouer la dernière séquence cliquer ici : <a href='#' class='btn btn-lg btn-default' style='text-decoration:none' onClick='restartOnLastCheckpoint(); return false;'><span class='glyphicon glyphicon-repeat'></span>&nbsp;Rejouer</a>\nOu appuyez sur 'ESPACE'.",
     "textmobile" : "\nVous avez perdu !\nTap Pour rejouer toucher l'écran."
      }
 
