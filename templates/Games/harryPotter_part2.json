@@ -141,10 +141,11 @@
                 "id":"020",
                 "onend": {
                   "text" : "Bravo ! Vous êtes un Gryffondor ! \n \n Faites des mouvements de souris de gauche à droite pour vous faire féliciter.&nbsp;<a class='btn btn-xs btn-success' onClick=' window.location = window.location.origin; return false;'><span class='glyphicon glyphicon-home'></span>&nbsp;Retour</a>",
-                  "textmobile" : "\nTap Tapoter pour vous faire féliciter.",
+                  "textmobile" : "\nTap Tapoter pour vous faire féliciter.\nOu revenez au site pour tenter une autre avanture&nbsp;<a class='btn btn-xs btn-success' onClick=' window.location = window.location.origin; return false;'><span class='glyphicon glyphicon-home'></span>&nbsp;Retour</a>",
                   "nextvideos" : { "move" : "100", "aftermove" : "020"} ,
                   "videomobiletoplay" :  "100",
-                  "nextvideomobile" :  "100",
+                  "nextvideomobile" :  "020",
+                  "delay" : 1000,
                   "type" : "playbymouse"
                   }
                 },
@@ -153,10 +154,11 @@
                  "id":"021",
                  "onend": {
                    "text" : "Bravo ! Vous êtes un Poufsouffle ! \n \n Faites des mouvements de souris de gauche à droite pour vous faire féliciter.&nbsp;<a class='btn btn-xs btn-success' onClick=' window.location = window.location.origin; return false;'><span class='glyphicon glyphicon-home'></span>&nbsp;Retour</a>",
-                   "textmobile" : "\nTap Tapoter pour vous faire féliciter.",
+                   "textmobile" : "\nTap Tapoter pour vous faire féliciter.\nOu revenez au site pour tenter une autre avanture&nbsp;<a class='btn btn-xs btn-success' onClick=' window.location = window.location.origin; return false;'><span class='glyphicon glyphicon-home'></span>&nbsp;Retour</a>",
                    "nextvideos" : { "move" : "100", "aftermove" : "021"} ,
                    "videomobiletoplay" :  "100",
-                   "nextvideomobile" :  "100",
+                   "nextvideomobile" :  "021",
+                   "delay" : 1000,
                    "type" : "playbymouse"
                    }
                  },
@@ -165,10 +167,11 @@
                   "id":"022",
                   "onend": {
                     "text" : "Bravo ! Vous êtes un Serpentard ! \n \n Faites des mouvements de souris de gauche à droite pour vous faire féliciter.&nbsp;<a class='btn btn-xs btn-success' onClick=' window.location = window.location.origin; return false;'><span class='glyphicon glyphicon-home'></span>&nbsp;Retour</a>",
-                    "textmobile" : "\nTap Tapoter pour vous faire féliciter.",
+                    "textmobile" : "\nTap Tapoter pour vous faire féliciter.\nOu revenez au site pour tenter une autre avanture&nbsp;<a class='btn btn-xs btn-success' onClick=' window.location = window.location.origin; return false;'><span class='glyphicon glyphicon-home'></span>&nbsp;Retour</a>",
                     "nextvideos" : { "move" : "100", "aftermove" : "022"} ,
                     "videomobiletoplay" :  "100",
-                    "nextvideomobile" :  "100",
+                    "nextvideomobile" :  "022",
+                    "delay" : 1000,
                     "type" : "playbymouse"
                     }
                   },
@@ -177,10 +180,11 @@
                    "id":"023",
                    "onend": {
                      "text" : "Bravo ! Vous êtes un Serdaigle ! \n \n Faites des mouvements de souris de gauche à droite pour vous faire féliciter.&nbsp;<a class='btn btn-xs btn-success' onClick=' window.location = window.location.origin; return false;'><span class='glyphicon glyphicon-home'></span>&nbsp;Retour</a>",
-                     "textmobile" : "\nTap Tapoter pour vous faire féliciter.",
+                     "textmobile" : "\nTap Tapoter pour vous faire féliciter.\nOu revenez au site pour tenter une autre avanture&nbsp;<a class='btn btn-xs btn-success' onClick=' window.location = window.location.origin; return false;'><span class='glyphicon glyphicon-home'></span>&nbsp;Retour</a>",
                      "nextvideos" : { "move" : "100", "aftermove" : "023"} ,
                      "videomobiletoplay" :  "100",
-                     "nextvideomobile" :  "100",
+                     "nextvideomobile" :  "023",
+                     "delay" : 1000,
                      "type" : "playbymouse"
                      }
                    },
@@ -204,7 +208,7 @@
                   "nextvideos" : { "ESPACE" : "018"} ,
                   "videomobiletoplay" : "018" ,
                   "nextvideomobile" : "025",
-                  "delay" : 2000,
+                  "delay" : 1000,
                   "type" : "playbykey",
                   "textduring" : "\nAppuyez longuement sur 'ESPACE' pour avancer vers le choixpeau\n"
                    }
