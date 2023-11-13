@@ -80,7 +80,7 @@
              "text" : "Ca c'est à cause du professeur Rogue !!!\nlink 'A' 65 : Montrer à Rogue que je ne me laisserais pas faire !\nlink 'B' 66 : Répondre à Ron que ça va !\nlink 'C' 67 : Ca va être mon tour je crois !\n",
              "textmobile" : "Ca c'est à cause du professeur Rogue !!!\nGauche Montrer à Rogue que je ne me laisserais pas faire !\nCa va être mon tour je crois ! Droite",
              "nextvideos" : { "A" : "009", "B": "010", "C" : "017"} ,
-             "nextvideosmobile" : { "up" : "010", "right" : "009", "left" : "017"} ,
+             "nextvideosmobile" : { "up" : "010", "right" : "017", "left" : "009"} ,
              "type" : "multichoicebykeypressed"
               }
            },
