@@ -180,7 +180,7 @@ function refreshGame(){
         var goodKeys = {};
         var gameOver = "";
         var found = false;
-        
+
         var gameOverMin = null;
         var gameOverMax = null;
         var hasgameover = false;
@@ -549,7 +549,7 @@ function refreshGame(){
                           videoElt.pause();
                       }
                       pause = true;
-                  }, 300);
+                  }, delay);
                   }
               });
               $('video').bind('ended',function(event){
