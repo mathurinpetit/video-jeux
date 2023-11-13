@@ -189,8 +189,8 @@
               {
                "id":"025",
                "onend": {
-                 "text" : "Bon c'est mon moment ! Un peu stressant quand même !\nlink 'A' 65 : Je veux pas savoir, je retourne à ma table !\nlink 'B' 66 : La magie c'est pas pour moi, je veux redevenir Moldu !\nlink 'C' 67 : Allez dis moi quelle maison je suis ! \nlink 'D' 68 : Je me dandine sur mon siège de nervosité...\n",
-                 "textmobile" : "Bon c'est mon moment ! Un peu stressant quand même !\nHaut La magie c'est pas pour moi, je veux redevenir Moldu !\nGauche Je veux pas savoir, je retourne à ma table !\nAllez dis moi quelle maison je suis Droite\nBas Je me dandine sur mon siège de nervosité...",
+                 "text" : "Bon c'est mon moment ! Un peu stressant quand même !\nlink 'A' 65 : Je veux pas savoir, je retourne à ma table !\nlink 'B' 66 : La magie c'est pas pour moi, je veux redevenir Moldu !\nlink 'C' 67 : Allez dis moi quelle maison je suis ! \nlink 'D' 68 : Je me dandine sur mon siège, trop de stress là...\n",
+                 "textmobile" : "Bon c'est mon moment ! Un peu stressant quand même !\nHaut La magie c'est pas pour moi, je veux redevenir Moldu !\nGauche Je veux pas savoir, je retourne à ma table !\nAllez dis moi quelle maison je suis Droite\nBas Je me dandine sur mon siège, trop de stress là...",
                  "nextvideos" : { "A" : "026", "B" : "050","C" : "019", "D" : "030"} ,
                  "nextvideosmobile" : { "up" : "050", "left" : "026","right": "019", "down" : "030  "} ,
                  "type" : "multichoicebykeypressed"
