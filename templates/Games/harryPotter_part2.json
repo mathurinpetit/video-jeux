@@ -202,9 +202,9 @@
                   "text" : "Bon prenons notre courage à deux mains, on y retourne !\nAppuyez longuement sur 'ESPACE' pour avancer vers le choixpeau\n",
                   "textmobile" : "Tap Tapotez pour avancer vers le choixpeau",
                   "nextvideos" : { "ESPACE" : "018"} ,
-                  "videomobiletoplay" : "017" ,
-                  "nextvideomobile" : "018",
-                  "delay" : 600,
+                  "videomobiletoplay" : "018" ,
+                  "nextvideomobile" : "025",
+                  "delay" : 2000,
                   "type" : "playbykey",
                   "textduring" : "\nAppuyez longuement sur 'ESPACE' pour avancer vers le choixpeau\n"
                    }
