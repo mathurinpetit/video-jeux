@@ -20,6 +20,12 @@ var cookieValue = "{{ game.shortName }}";
 
 {% if mobile %}
 var mobile = true;
+var ua = navigator.userAgent || navigator.vendor || window.opera;
+var isInstagram = (ua.indexOf('Instagram') > -1) ? true : false;
+if(isInstagram){
+  $("#isIntagram").show();
+}
+
 {% else %}
 var mobile = false;
 {% endif %}
