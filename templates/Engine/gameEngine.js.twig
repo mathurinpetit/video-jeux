@@ -104,7 +104,7 @@ $('a.share').click(function(event){
   if(network != "email"){
     event.preventDefault(event);
   }
-	var href    = $link.attr('href').replace('URLENCODED',encodeURI(get_short_url())).replace('TITLE',encodeURI("video-jeux.fr - "+'{{ game.name }}'));
+	var href    = $link.attr('href').replace('URLENCODED',encodeURI(get_short_url())).replace('TITLE',encodeURI("videojeu.com - "+'{{ game.name }}'));
 
 	var networks = {
 		facebook : { width : 600, height : 300 },
